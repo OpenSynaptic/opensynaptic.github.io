@@ -45,10 +45,9 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Multi-language docs structure: use en_GB as primary
           editUrl:
             'https://github.com/opensynaptic/opensynaptic.github.io/tree/main/',
-          // Configure to use docs/opensynaptic/en_GB as the base
+          // For English docs
           path: 'docs/opensynaptic/en_GB',
         },
         blog: {
@@ -90,10 +89,6 @@ const config: Config = {
           label: 'Docs',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
-        {
-          type: 'localeDropdown',
-          position: 'right',
-        },
         {
           href: 'https://github.com/opensynaptic/opensynaptic.github.io',
           label: 'GitHub',
