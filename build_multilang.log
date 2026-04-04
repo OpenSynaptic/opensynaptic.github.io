@@ -1,0 +1,32 @@
+
+> opensynaptic-site@1.0.0 build
+> docusaurus build
+
+[INFO] [en] Creating an optimized production build...
+[WARNING] No docs found in "tutorial-basics": can't auto-generate a sidebar.
+[WARNING] No docs found in "tutorial-extras": can't auto-generate a sidebar.
+[ERROR] Sidebars file at "E:\opensynaptic.github.io\sidebars.ts" failed to be loaded.
+[ERROR] Loading of version failed for version current
+
+[ERROR] Error: Unable to build website for locale en.
+    at tryToBuildLocale (E:\opensynaptic.github.io\node_modules\@docusaurus\core\lib\commands\build\build.js:83:15)
+    at async E:\opensynaptic.github.io\node_modules\@docusaurus\core\lib\commands\build\build.js:35:9
+    at async mapAsyncSequential (E:\opensynaptic.github.io\node_modules\@docusaurus\utils\lib\jsUtils.js:21:24)
+    at async Command.build (E:\opensynaptic.github.io\node_modules\@docusaurus\core\lib\commands\build\build.js:34:5)
+    at async Promise.all (index 0)
+    at async runCLI (E:\opensynaptic.github.io\node_modules\@docusaurus\core\lib\commands\cli.js:56:5)
+    at async file:///E:/opensynaptic.github.io/node_modules/@docusaurus/core/bin/docusaurus.mjs:44:3 {
+  [cause]: Error: Sidebar category Guides & Tutorials has neither any subitem nor a link. This makes this item not able to link to anything.
+      at postProcessSidebarItem (E:\opensynaptic.github.io\node_modules\@docusaurus\plugin-content-docs\lib\sidebars\postProcessor.js:35:19)
+      at E:\opensynaptic.github.io\node_modules\@docusaurus\plugin-content-docs\lib\sidebars\postProcessor.js:80:24
+      at Array.map (<anonymous>)
+      at E:\opensynaptic.github.io\node_modules\@docusaurus\plugin-content-docs\lib\sidebars\postProcessor.js:80:10
+      at E:\opensynaptic.github.io\node_modules\lodash\lodash.js:13500:38
+      at E:\opensynaptic.github.io\node_modules\lodash\lodash.js:4998:15
+      at baseForOwn (E:\opensynaptic.github.io\node_modules\lodash\lodash.js:3037:24)
+      at lodash.mapValues (E:\opensynaptic.github.io\node_modules\lodash\lodash.js:13499:7)
+      at postProcessSidebars (E:\opensynaptic.github.io\node_modules\@docusaurus\plugin-content-docs\lib\sidebars\postProcessor.js:79:29)
+      at loadSidebars (E:\opensynaptic.github.io\node_modules\@docusaurus\plugin-content-docs\lib\sidebars\index.js:92:56)
+}
+[INFO] Docusaurus version: 3.9.2
+Node version: v24.14.1

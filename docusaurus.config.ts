@@ -47,8 +47,30 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           editUrl:
             'https://github.com/opensynaptic/opensynaptic.github.io/tree/main/',
-          // For English docs
+          // English docs root
           path: 'docs/opensynaptic/en_GB',
+          include: [
+            'intro.md',
+            'Home.md',
+            'Navigation.md',
+            'INDEX.md',
+            'QUICK_START.md',
+            'ARCHITECTURE.md',
+            'API.md',
+            'CORE_API.md',
+            'CONFIG_SCHEMA.md',
+            'ID_LEASE_SYSTEM.md',
+            'ID_LEASE_CONFIG_REFERENCE.md',
+            'PYCORE_RUST_API.md',
+            'RSCORE_API.md',
+            'TRANSPORTER_PLUGIN.md',
+            'COMPLETION_REPORT.md',
+            'DOCUMENT_ORGANIZATION.md',
+            'DOCUMENTATION_ORGANIZATION_FINAL.md',
+            'ROOT_CLEANUP_COMPLETE.md',
+            'MULTI_LANGUAGE_GUIDE.md',
+            'I18N.md',
+          ],
         },
         blog: {
           showReadingTime: true,
@@ -69,6 +91,25 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'docs-zh',
+        path: 'docs/opensynaptic/zh_CN',
+        routeBasePath: 'docs/zh',
+        sidebarPath: './sidebars.zh.ts',
+        include: [
+          'intro.md',
+          'Home.md',
+          'Navigation.md',
+        ],
+        editUrl:
+          'https://github.com/opensynaptic/opensynaptic.github.io/tree/main/',
+      },
+    ],
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
@@ -86,7 +127,14 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Docs',
+          label: 'Docs (EN)',
+        },
+        {
+          type: 'docSidebar',
+          docsPluginId: 'docs-zh',
+          sidebarId: 'tutorialSidebarZh',
+          position: 'left',
+          label: '文档 (ZH)',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {

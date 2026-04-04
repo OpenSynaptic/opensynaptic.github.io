@@ -8,7 +8,7 @@
 [![Documentation](https://img.shields.io/badge/docs-201%20pages-brightgreen?style=flat-square)](INDEX)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/opensynaptic/opensynaptic/blob/main/LICENSE)
 [![Status](https://img.shields.io/badge/status-Active-success?style=flat-square)]()
-[![Languages](https://img.shields.io/badge/languages-EN%20%7C%20中文-orange?style=flat-square)]()
+[![Languages](https://img.shields.io/badge/languages-EN%20%7C%20 中文-orange?style=flat-square)]()
 
 [GitHub](https://github.com/opensynaptic/opensynaptic) • [Issues](https://github.com/opensynaptic/opensynaptic/issues) • [Discussions](https://github.com/opensynaptic/opensynaptic/discussions)
 
@@ -24,7 +24,7 @@
       <h3>🇬🇧 English</h3>
       <p><strong>Full documentation in English</strong></p>
       <p>
-        <a href="Navigation-EN"><strong>→ Full Navigation</strong></a><br/>
+        <a href="/docs/Home"><strong>→ Full Navigation</strong></a><br/>
         <a href="README">Installation</a> • 
         <a href="ARCHITECTURE">Architecture</a> • 
         <a href="QUICK_START">Quick Start</a>
@@ -34,11 +34,11 @@
       <h3>🇨🇳 中文</h3>
       <p><strong>全部中文文档</strong></p>
       <p>
-        <a href="../zh_CN/Home"><strong>→ 🇨🇳 中文首页</strong></a><br/>
-        <a href="../zh_CN/Navigation-ZH"><strong>→ 完整导航</strong></a><br/>
-        <a href="../zh_CN/README">安装指南</a> • 
-        <a href="../zh_CN/ARCHITECTURE">架构</a> • 
-        <a href="../zh_CN/QUICK_START">快速开始</a>
+        <a href="/docs/zh/Home"><strong>→ 🇨🇳 中文首页</strong></a><br/>
+        <a href="/docs/zh/Navigation"><strong>→ 完整导航</strong></a><br/>
+        <a href="/docs/zh/Home">安装指南</a> • 
+        <a href="/docs/zh/Home">架构</a> • 
+        <a href="/docs/zh/Home">快速开始</a>
       </p>
     </td>
   </tr>

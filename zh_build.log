@@ -1,0 +1,162 @@
+
+> opensynaptic-site@1.0.0 build
+> docusaurus build
+
+[INFO] [en] Creating an optimized production build...
+[WARNING] Duplicate routes found!
+- Attempting to create page at /docs/zh/, but a page already exists at this route.
+- Attempting to create page at /docs/, but a page already exists at this route.
+This could lead to non-deterministic routing behavior.
+[90m[[90mwebpackbar[90m][39m [36mℹ[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [36mℹ[39m Compiling Server
+[90m[[90mwebpackbar[90m][39m [32m✔[39m Server: Compiled with some errors in 487.15ms
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|E:\opensynaptic.github.io\node_modules\@docusaurus\mdx-loader\lib\index.js??ruleSet[1].rules[11].use[0]!E:\opensynaptic.github.io\docs\opensynaptic\zh_CN\ARCHITECTURE.md': No serializer registered for VFileMessage
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> webpack/lib/ModuleBuildError -> Error -> VFileMessage
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|E:\opensynaptic.github.io\node_modules\@docusaurus\mdx-loader\lib\index.js??ruleSet[1].rules[8].use[0]!E:\opensynaptic.github.io\docs\opensynaptic\en_GB\releases-v1.0.0-rc1.md': No serializer registered for VFileMessage
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> webpack/lib/ModuleBuildError -> Error -> VFileMessage
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|E:\opensynaptic.github.io\node_modules\@docusaurus\mdx-loader\lib\index.js??ruleSet[1].rules[8].use[0]!E:\opensynaptic.github.io\docs\opensynaptic\en_GB\api-DISPLAY_API_IMPLEMENTATION_SUMMARY.md': No serializer registered for VFileMessage
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> webpack/lib/ModuleBuildError -> Error -> VFileMessage
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|E:\opensynaptic.github.io\node_modules\@docusaurus\mdx-loader\lib\index.js??ruleSet[1].rules[11].use[0]!E:\opensynaptic.github.io\docs\opensynaptic\zh_CN\releases-v0.3.0公告.md': No serializer registered for VFileMessage
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> webpack/lib/ModuleBuildError -> Error -> VFileMessage
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|E:\opensynaptic.github.io\node_modules\@docusaurus\mdx-loader\lib\index.js??ruleSet[1].rules[11].use[0]!E:\opensynaptic.github.io\docs\opensynaptic\zh_CN\api-DISPLAY_API_IMPLEMENTATION_SUMMARY.md': No serializer registered for VFileMessage
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> webpack/lib/ModuleBuildError -> Error -> VFileMessage
+[WARNING] Markdown link with empty URL found in source file "docs/opensynaptic/en_GB/Navigation.md" (7:1).
+[WARNING] Markdown link with empty URL found in source file "docs/opensynaptic/en_GB/Navigation.md" (8:1).
+[WARNING] Markdown link with empty URL found in source file "docs/opensynaptic/en_GB/Navigation.md" (9:1).
+[WARNING] Markdown link with empty URL found in source file "docs/opensynaptic/zh_CN/Home.md" (10:1).
+[WARNING] Markdown link with empty URL found in source file "docs/opensynaptic/zh_CN/Home.md" (11:1).
+[WARNING] Markdown link with empty URL found in source file "docs/opensynaptic/en_GB/INDEX.md" (7:1).
+[WARNING] Markdown link with empty URL found in source file "docs/opensynaptic/en_GB/INDEX.md" (8:1).
+[WARNING] Markdown link with empty URL found in source file "docs/opensynaptic/en_GB/INDEX.md" (9:1).
+[WARNING] Markdown link with empty URL found in source file "docs/opensynaptic/zh_CN/Navigation.md" (7:1).
+[WARNING] Markdown link with empty URL found in source file "docs/opensynaptic/zh_CN/Navigation.md" (8:1).
+[WARNING] Markdown link with empty URL found in source file "docs/opensynaptic/zh_CN/Navigation.md" (9:1).
+[WARNING] Markdown link with empty URL found in source file "docs/opensynaptic/en_GB/Home.md" (10:1).
+[WARNING] Markdown link with empty URL found in source file "docs/opensynaptic/en_GB/Home.md" (11:1).
+[WARNING] Markdown link with empty URL found in source file "docs/opensynaptic/zh_CN/INDEX.md" (7:1).
+[WARNING] Markdown link with empty URL found in source file "docs/opensynaptic/zh_CN/INDEX.md" (8:1).
+[WARNING] Markdown link with empty URL found in source file "docs/opensynaptic/zh_CN/INDEX.md" (9:1).
+[90m[[90mwebpackbar[90m][39m [32m✔[39m Client: Compiled with some errors in 13.75s
+[ERROR] Client bundle compiled with errors therefore further build is impossible.
+Error: MDX compilation failed for file "E:\opensynaptic.github.io\docs\opensynaptic\en_GB\api-DISPLAY_API_IMPLEMENTATION_SUMMARY.md"
+Cause: Unexpected character `1` (U+0031) before name, expected a character that can start a name, such as a letter, `$`, or `_`
+Details:
+{
+  "column": 50,
+  "file": "",
+  "message": "Unexpected character `1` (U+0031) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
+  "line": 328,
+  "name": "328:50",
+  "place": {
+    "_bufferIndex": 47,
+    "_index": 0,
+    "line": 328,
+    "column": 50,
+    "offset": 10741
+  },
+  "reason": "Unexpected character `1` (U+0031) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
+  "ruleId": "unexpected-character",
+  "source": "micromark-extension-mdx-jsx",
+  "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect"
+}
+
+--------------------------
+
+Error: MDX compilation failed for file "E:\opensynaptic.github.io\docs\opensynaptic\en_GB\releases-v1.0.0-rc1.md"
+Cause: Unexpected character `-` (U+002D) before name, expected a character that can start a name, such as a letter, `$`, or `_`
+Details:
+{
+  "column": 58,
+  "file": "",
+  "message": "Unexpected character `-` (U+002D) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
+  "line": 177,
+  "name": "177:58",
+  "place": {
+    "_bufferIndex": 55,
+    "_index": 0,
+    "line": 177,
+    "column": 58,
+    "offset": 5810
+  },
+  "reason": "Unexpected character `-` (U+002D) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
+  "ruleId": "unexpected-character",
+  "source": "micromark-extension-mdx-jsx",
+  "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect"
+}
+
+--------------------------
+
+Error: MDX compilation failed for file "E:\opensynaptic.github.io\docs\opensynaptic\zh_CN\ARCHITECTURE.md"
+Cause: Could not parse expression with acorn
+Details:
+{
+  "cause": {
+    "pos": 2549,
+    "loc": {
+      "line": 115,
+      "column": 19
+    }
+  },
+  "column": 20,
+  "file": "",
+  "message": "Could not parse expression with acorn",
+  "line": 115,
+  "name": "115:20",
+  "place": {
+    "line": 115,
+    "column": 20,
+    "offset": 2549
+  },
+  "reason": "Could not parse expression with acorn",
+  "ruleId": "acorn",
+  "source": "micromark-extension-mdx-expression",
+  "url": "https://github.com/micromark/micromark-extension-mdx-expression/tree/main/packages/micromark-extension-mdx-expression#could-not-parse-expression-with-acorn"
+}
+
+--------------------------
+
+Error: MDX compilation failed for file "E:\opensynaptic.github.io\docs\opensynaptic\zh_CN\api-DISPLAY_API_IMPLEMENTATION_SUMMARY.md"
+Cause: Unexpected character `1` (U+0031) before name, expected a character that can start a name, such as a letter, `$`, or `_`
+Details:
+{
+  "column": 21,
+  "file": "",
+  "message": "Unexpected character `1` (U+0031) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
+  "line": 332,
+  "name": "332:21",
+  "place": {
+    "_bufferIndex": 18,
+    "_index": 0,
+    "line": 332,
+    "column": 21,
+    "offset": 7473
+  },
+  "reason": "Unexpected character `1` (U+0031) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
+  "ruleId": "unexpected-character",
+  "source": "micromark-extension-mdx-jsx",
+  "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect"
+}
+
+--------------------------
+
+Error: MDX compilation failed for file "E:\opensynaptic.github.io\docs\opensynaptic\zh_CN\releases-v0.3.0公告.md"
+Cause: Unexpected character `5` (U+0035) before name, expected a character that can start a name, such as a letter, `$`, or `_`
+Details:
+{
+  "column": 15,
+  "file": "",
+  "message": "Unexpected character `5` (U+0035) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
+  "line": 489,
+  "name": "489:15",
+  "place": {
+    "_bufferIndex": 1,
+    "_index": 0,
+    "line": 489,
+    "column": 15,
+    "offset": 10317
+  },
+  "reason": "Unexpected character `5` (U+0035) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
+  "ruleId": "unexpected-character",
+  "source": "micromark-extension-mdx-jsx",
+  "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect"
+}
