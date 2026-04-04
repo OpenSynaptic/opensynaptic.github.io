@@ -54,6 +54,7 @@ const config: Config = {
           path: 'docs/opensynaptic/en_GB',
           include: ['**/*.{md,mdx}'],
           exclude: ['**/_*.md'],
+          routeBasePath: 'docs',
         },
         blog: {
           showReadingTime: true,
@@ -71,6 +72,33 @@ const config: Config = {
           customCss: './src/css/custom.css',
         },
       } satisfies Preset.Options,
+    ],
+  ],
+
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'extensions',
+        path: 'docs/opensynaptic/extensions',
+        routeBasePath: 'docs/extensions',
+        sidebarPath: './sidebars.extensions.ts',
+        include: ['**/*.{md,mdx}'],
+        editUrl:
+          'https://github.com/opensynaptic/opensynaptic.github.io/tree/main/',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'playbooks',
+        path: 'docs/opensynaptic/playbooks',
+        routeBasePath: 'docs/playbooks',
+        sidebarPath: './sidebars.playbooks.ts',
+        include: ['**/*.{md,mdx}'],
+        editUrl:
+          'https://github.com/opensynaptic/opensynaptic.github.io/tree/main/',
+      },
     ],
   ],
 
@@ -92,6 +120,20 @@ const config: Config = {
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Docs',
+        },
+        {
+          type: 'docSidebar',
+          docsPluginId: 'extensions',
+          sidebarId: 'extensionsSidebar',
+          position: 'left',
+          label: 'Extensions',
+        },
+        {
+          type: 'docSidebar',
+          docsPluginId: 'playbooks',
+          sidebarId: 'playbooksSidebar',
+          position: 'left',
+          label: 'Playbooks',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
