@@ -20,10 +20,10 @@ function HomepageHeader() {
           2-N-2 IoT Protocol Stack docs portal for architecture, APIs, extensions, and operations.
         </p>
         <div className={styles.buttons}>
-          <Link className="button button--secondary button--lg" to="/docs/">
+          <Link className="button button--secondary button--lg" to="/docs/Home">
             Get Started
           </Link>
-          <Link className="button button--outline button--lg" to="/docs/extensions/">
+          <Link className="button button--outline button--lg" to="/docs/extensions/intro">
             Explore Extensions
           </Link>
         </div>
@@ -41,21 +41,21 @@ function QuickEntryCards() {
             <div className={styles.card}>
               <Heading as="h3">Core Docs</Heading>
               <p>Architecture, APIs, config schema, and core runtime references.</p>
-              <Link to="/docs/">Open Core Docs</Link>
+              <Link to="/docs/Home">Open Core Docs</Link>
             </div>
           </div>
           <div className="col col--4">
             <div className={styles.card}>
               <Heading as="h3">Extensions</Heading>
               <p>Reserved space for adapters, plugins, and ecosystem modules.</p>
-              <Link to="/docs/extensions/">Open Extensions</Link>
+              <Link to="/docs/extensions/intro">Open Extensions</Link>
             </div>
           </div>
           <div className="col col--4">
             <div className={styles.card}>
               <Heading as="h3">Playbooks</Heading>
               <p>Reserved runbooks for deployment, incident response, and ops.</p>
-              <Link to="/docs/playbooks/">Open Playbooks</Link>
+              <Link to="/docs/playbooks/intro">Open Playbooks</Link>
             </div>
           </div>
         </div>

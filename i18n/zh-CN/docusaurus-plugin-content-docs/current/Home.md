@@ -9,7 +9,7 @@ title: 🎯 OpenSynaptic Wiki
 **2-N-2 物联网协议栈** - 标准化 • 压缩 • 分发
 
 [![Latest Release](https://img.shields.io/badge/release-v1.1.0-blue?style=flat-square)](releases/releases-v1.1.0)
-[![Documentation](https://img.shields.io/badge/docs-OpenSynaptic-brightgreen?style=flat-square)](INDEX)
+[![Documentation](https://img.shields.io/badge/docs-OpenSynaptic-brightgreen?style=flat-square)](/zh-CN/docs/index)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/opensynaptic/opensynaptic/blob/main/LICENSE)
 
 [GitHub](https://github.com/opensynaptic/opensynaptic) • [Issues](https://github.com/opensynaptic/opensynaptic/issues) • [Discussions](https://github.com/opensynaptic/opensynaptic/discussions)
@@ -30,7 +30,7 @@ title: 🎯 OpenSynaptic Wiki
 ### 🚀 常用入口
 
 - [快速开始指南](QUICK_START)
-- [README（安装与项目说明）](README)
+- [README（安装与项目说明）](/zh-CN/docs/readme)
 - [核心 API 指南](CORE_API)
 - [OpenSynaptic 系统架构](ARCHITECTURE)
 - [ID 租赁系统](ID_LEASE_SYSTEM)
