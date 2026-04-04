@@ -112,7 +112,7 @@ OpenSynaptic 支持**双后端架构**：
 
 2. 标准化
    OpenSynapticStandardizer.standardize()
-   → {"temperature": 298.65}
+   → `{"temperature": 298.65}`
 
 3. 压缩
    OpenSynapticEngine.compress()
