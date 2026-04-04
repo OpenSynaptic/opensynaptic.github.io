@@ -6,7 +6,7 @@ language: en
 
 # Multi-Language Documentation Guide
 
-**Language**: [English](MULTI_LANGUAGE_GUIDE) | [简体中文](../zh_CN/MULTI_LANGUAGE_GUIDE)  
+**Language**: [English](MULTI_LANGUAGE_GUIDE) | Use the locale dropdown for Chinese  
 **Last updated**: 2026-04-04
 
 This guide explains how the OpenSynaptic documentation supports multiple languages on GitHub Pages.
@@ -52,7 +52,7 @@ docs/
 
 Users can switch languages in three ways:
 
-1. **Language Selector Page**: Visit [index.html](index.html) to choose language
+1. **Language Selector Page**: Visit [index](/docs/index) to choose language
 2. **Header Links**: Each page has language toggle links in the header
 3. **Direct URL Navigation**: 
    - English: `/docs/FILENAME.md` or `/docs/en/FILENAME.md`
@@ -401,7 +401,7 @@ Add YAML front matter and translate content for each file.
 - [Jekyll Documentation](https://jekyllrb.com/)
 - [GitHub Pages Guide](https://docs.github.com/en/pages)
 - [Markdown Guide](https://www.markdownguide.org/)
-- [OpenSynaptic Main Documentation](README)
+- [OpenSynaptic Main Documentation](/docs/readme)
 
 ---
 
@@ -418,4 +418,4 @@ If you find translation issues or have suggestions:
 
 **Last updated**: 2026-04-04  
 **Maintained by**: OpenSynaptic Community  
-**Language**: [English](MULTI_LANGUAGE_GUIDE) | [简体中文](../zh_CN/MULTI_LANGUAGE_GUIDE)
+**Language**: [English](MULTI_LANGUAGE_GUIDE) | Use the locale dropdown for Chinese

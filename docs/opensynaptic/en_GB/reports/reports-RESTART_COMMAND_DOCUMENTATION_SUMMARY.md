@@ -12,31 +12,31 @@ Successfully integrated comprehensive documentation for the new `os-node restart
 ## Files Modified
 
 ### 1. **Root Documentation**
-- **[README.md](README)** (Main Hub)
+- **[README.md](/docs/readme)** (Main Hub)
   - Updated "Command Categories" section to include `restart`
   - Added `restart` command to the "All Commands" table with description
   - Location: Lines 395, 405
 
 ### 2. **CLI Documentation**
-- **[src/opensynaptic/CLI/README.md](src-opensynaptic-CLI-README)** (CLI Reference)
+- **[src/opensynaptic/CLI/README.md](https://github.com/opensynaptic/opensynaptic/blob/main/src/opensynaptic/CLI/README.md)** (CLI Reference)
   - Added `restart` to command reference table
   - Added example usage: `python -u src/main.py restart --graceful --timeout 10`
   - Added example with custom host/port parameters
   - Location: Lines 17, 67-68
 
 ### 3. **Workspace Instructions**
-- **[AGENTS.md](AGENTS)** (Workspace Guidelines)
+- **[AGENTS.md](https://github.com/opensynaptic/opensynaptic/blob/main/AGENTS.md)** (Workspace Guidelines)
   - Added graceful restart to "Maintenance utilities" section
   - Included dual-terminal workflow notes
   - Location: Lines 103-106
 
 ### 4. **Documentation Index**
-- **[docs/INDEX.md](docs-INDEX)** (Documentation Hub)
+- **[docs/INDEX.md](/docs/index)** (Documentation Hub)
   - Added new guide file to "Guides" section
   - Location: Line 64
 
 ### 5. **New Comprehensive Guide** ✨
-- **[docs/guides/RESTART_COMMAND_GUIDE.md](docs-guides-RESTART_COMMAND_GUIDE)** (11,992 bytes)
+- **[docs/guides/RESTART_COMMAND_GUIDE.md](/docs/guides/guides-RESTART_COMMAND_GUIDE)** (11,992 bytes)
   - Complete 370+ line reference guide including:
     - **Quick Start**: 3 usage patterns (basic, custom timeout, custom host/port)
     - **How It Works**: Architecture diagram, execution flow, graceful vs. non-graceful comparison
@@ -113,12 +113,12 @@ os-node restart --graceful --timeout 15 --host 192.168.1.100 --port 9090
 ## How to Use This Guide
 
 ### For Quick Learning
-1. Read the summary in [README.md](README) line 405
+1. Read the summary in [README.md](/docs/readme) line 405
 2. Try basic example: `os-node restart --graceful`
-3. Check CLI examples in [src/opensynaptic/CLI/README.md](src-opensynaptic-CLI-README)
+3. Check CLI examples in [src/opensynaptic/CLI/README.md](https://github.com/opensynaptic/opensynaptic/blob/main/src/opensynaptic/CLI/README.md)
 
 ### For Deep Understanding
-1. Start with [docs/guides/RESTART_COMMAND_GUIDE.md](docs-guides-RESTART_COMMAND_GUIDE) "Overview" section
+1. Start with [docs/guides/RESTART_COMMAND_GUIDE.md](/docs/guides/guides-RESTART_COMMAND_GUIDE) "Overview" section
 2. Review "How It Works" architecture
 3. Follow examples in your use case
 4. Consult "Troubleshooting" if issues arise
@@ -138,10 +138,10 @@ os-node restart --graceful --timeout 15 --host 192.168.1.100 --port 9090
 All guides properly link to related documents:
 
 ```markdown
-- [README.md](README) – CLI Quick Reference
-- [src/opensynaptic/CLI/README.md](src-opensynaptic-CLI-README) – Detailed CLI Examples
-- [ARCHITECTURE.md](ARCHITECTURE) – System Architecture
-- [CONFIG_SCHEMA.md](CONFIG_SCHEMA) – Configuration Reference
+- [README.md](/docs/readme) – CLI Quick Reference
+- [src/opensynaptic/CLI/README.md](https://github.com/opensynaptic/opensynaptic/blob/main/src/opensynaptic/CLI/README.md) – Detailed CLI Examples
+- [ARCHITECTURE.md](/docs/ARCHITECTURE) – System Architecture
+- [CONFIG_SCHEMA.md](/docs/CONFIG_SCHEMA) – Configuration Reference
 ```
 
 ## Future Enhancements

@@ -425,7 +425,7 @@ A: Error is logged to `os_log` and printed to Terminal B. Check Config.json vali
 
 ## See Also
 
-- [README.md](README) – CLI Quick Reference
-- [src/opensynaptic/CLI/README.md](src-opensynaptic-CLI-README) – Detailed CLI Examples
-- [ARCHITECTURE.md](ARCHITECTURE) – System Architecture
-- [CONFIG_SCHEMA.md](CONFIG_SCHEMA) – Configuration Reference
+- [README.md](/docs/readme) – CLI Quick Reference
+- [src/opensynaptic/CLI/README.md](https://github.com/opensynaptic/opensynaptic/blob/main/src/opensynaptic/CLI/README.md) – Detailed CLI Examples
+- [ARCHITECTURE.md](/docs/ARCHITECTURE) – System Architecture
+- [CONFIG_SCHEMA.md](/docs/CONFIG_SCHEMA) – Configuration Reference

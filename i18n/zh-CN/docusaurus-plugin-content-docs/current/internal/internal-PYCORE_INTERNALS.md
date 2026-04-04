@@ -12,18 +12,18 @@ language: zh
 
 ## 目录
 
-1. [管道概述](#1-管道概述)
-2. [数据契约](#2-数据契约)
-3. [OpenSynapticStandardizer](#3-opensynapticstandardizer)
-4. [OpenSynapticEngine](#4-opensynapticengine)
-5. [OSVisualFusionEngine](#5-osvisualfusionengine)
-6. [OSHandshakeManager / CMD](#6-oshandshakemanager--cmd)
-7. [OpenSynaptic (协调器)](#7-opensynaptic-协调器)
-8. [TransporterManager](#8-transportermanager)
-9. [安全原语](#9-安全原语)
-10. [缓冲区实用工具](#10-缓冲区实用工具)
-11. [错误处理约定](#11-错误处理约定)
-12. [线程安全协议](#12-线程安全协议)
+1. 管道概述
+2. 数据契约
+3. OpenSynapticStandardizer
+4. OpenSynapticEngine
+5. OSVisualFusionEngine
+6. OSHandshakeManager / CMD
+7. OpenSynaptic（协调器）
+8. TransporterManager
+9. 安全原语
+10. 缓冲区实用工具
+11. 错误处理约定
+12. 线程安全协议
 
 ---
 
@@ -227,6 +227,6 @@ OpenSynapticStandardizer(config_path: str = 'Config.json')
 
 ---
 
-有关完整的 API 定义、错误处理协议、线程安全保证和示例代码，请参考 [英文原始文档](PYCORE_INTERNALS)。
+有关完整的 API 定义、错误处理协议、线程安全保证和示例代码，请参考 [英文原始文档](/docs/internal/internal-PYCORE_INTERNALS)。
 
 本翻译保持了所有代码示例、表格结构和技术术语的完整性，仅在文本说明部分进行了中文本地化。

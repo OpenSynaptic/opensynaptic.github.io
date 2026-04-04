@@ -3,7 +3,7 @@
 API and service contracts currently implemented in the repository.
 
 > **Deep-dive references:**
-> - [`internal/PYCORE_INTERNALS.md`](internal-PYCORE_INTERNALS) — complete method-level reference for every class in `pycore/` including data contracts, wire formats, and security internals
+> - [`internal/PYCORE_INTERNALS.md`](internal/internal-PYCORE_INTERNALS) — complete method-level reference for every class in `pycore/` including data contracts, wire formats, and security internals
 > - [`RSCORE_API.md`](RSCORE_API) — Rust core (`rscore/`) API design specification
 > - [`CONFIG_SCHEMA.md`](CONFIG_SCHEMA) — `Config.json` schema reference
 > - [`TRANSPORTER_PLUGIN.md`](TRANSPORTER_PLUGIN) — how to add new transporter drivers

@@ -39,7 +39,7 @@ python -u src/main.py plugin-test --suite audit
 - `README.md`
 - `CHANGELOG.md`
 - `AGENTS.md`
-- [v1.1.0 发布公告](v1.1.0_announcement)
+- [v1.1.0 发布公告](releases-v1.1.0_announcement)
 
 ## 备注
 

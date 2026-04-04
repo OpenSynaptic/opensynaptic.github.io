@@ -52,7 +52,7 @@ docs/
 
 用户可以通过三种方式切换语言：
 
-1. **语言选择器页面**: 访问 [index.html](index.html) 选择语言
+1. **语言选择器页面**: 访问 [index](/zh-CN/docs/index) 选择语言
 2. **页面头部链接**: 每个页面的头部都有语言切换链接
 3. **直接 URL 导航**: 
    - 英文: `/docs/FILENAME.md` 或 `/docs/en/FILENAME.md`
@@ -395,7 +395,7 @@ cp docs/README.md docs/es/README.md
 - [Jekyll 文档](https://jekyllrb.com/)
 - [GitHub Pages 指南](https://docs.github.com/en/pages)
 - [Markdown 指南](https://www.markdownguide.org/)
-- [OpenSynaptic 主文档](README)
+- [OpenSynaptic 主文档](/zh-CN/docs/readme)
 
 ---
 

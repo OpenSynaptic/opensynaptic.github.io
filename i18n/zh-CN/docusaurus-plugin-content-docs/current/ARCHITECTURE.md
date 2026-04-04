@@ -242,7 +242,7 @@ libraries/
 1. 在 `plugins/` 中创建插件
 2. 遵循 `ServiceManager` 生命周期合约
 3. 声明配置需求和依赖
-4. 详见 [PLUGIN_DEVELOPMENT_SPECIFICATION_2026.md](plugins-PLUGIN_DEVELOPMENT_SPECIFICATION_2026)
+4. 详见 [PLUGIN_DEVELOPMENT_SPECIFICATION_2026.md](plugins/plugins-PLUGIN_DEVELOPMENT_SPECIFICATION_2026)
 
 ### 添加新后端
 1. 在 `opensynaptic_rscore/` 中实现 Rust 核心
@@ -269,7 +269,7 @@ libraries/
 
 - [API.md](API) - 了解公共 API
 - [CONFIG_SCHEMA.md](CONFIG_SCHEMA) - 配置详解
-- [PLUGIN_DEVELOPMENT_SPECIFICATION_2026.md](plugins-PLUGIN_DEVELOPMENT_SPECIFICATION_2026) - 插件开发
+- [PLUGIN_DEVELOPMENT_SPECIFICATION_2026.md](plugins/plugins-PLUGIN_DEVELOPMENT_SPECIFICATION_2026) - 插件开发
 - [TRANSPORTER_PLUGIN.md](TRANSPORTER_PLUGIN) - 创建自定义传输
 
 ---
