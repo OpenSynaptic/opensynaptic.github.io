@@ -54,25 +54,25 @@
       <h3>👨‍💼</h3>
       <h4>First Time?</h4>
       <p>New to OpenSynaptic?</p>
-      <a href="README" style="display: inline-block; padding: 8px 16px; background: #0366d6; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;">Get Started →</a>
+      [**Get Started →**](README)
     </td>
     <td align="center" width="25%">
       <h3>🔧</h3>
       <h4>Operator</h4>
       <p>Deploy & manage</p>
-      <a href="Navigation-EN" style="display: inline-block; padding: 8px 16px; background: #28a745; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;">Configure →</a>
+      [**Configure →**](Navigation-EN)
     </td>
     <td align="center" width="25%">
       <h3>🔌</h3>
       <h4>Developer</h4>
       <p>Build plugins</p>
-       <a href="plugins-PLUGIN_DEVELOPMENT_SPECIFICATION_2026" style="display: inline-block; padding: 8px 16px; background: #6f42c1; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;">Dev Guide →</a>
+      [**Dev Guide →**](plugins-PLUGIN_DEVELOPMENT_SPECIFICATION_2026)
     </td>
     <td align="center" width="25%">
       <h3>📚</h3>
       <h4>Architecture</h4>
       <p>Understand system</p>
-      <a href="ARCHITECTURE" style="display: inline-block; padding: 8px 16px; background: #fd7e14; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;">Learn →</a>
+      [**Learn →**](ARCHITECTURE)
     </td>
   </tr>
 </table>

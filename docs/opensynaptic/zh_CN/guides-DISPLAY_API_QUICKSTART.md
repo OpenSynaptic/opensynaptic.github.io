@@ -123,7 +123,7 @@ def auto_load(config=None):
 {"ok": true, "metadata": {...}}
 ```
 
-### GET /api/display/render/{plugin}:{section}?format=json
+### GET /api/display/render/\{plugin\}:\{section\}?format=json
 渲染特定部分
 ```json
 {"ok": true, "section": "plugin:section", "format": "json", "data": {...}}

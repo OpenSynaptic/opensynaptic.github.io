@@ -263,7 +263,7 @@ all_data = collect_all_sections(fmt=DisplayFormat.JSON, node=node_instance)
 }
 ```
 
-#### GET /api/display/render/{plugin_name}:{section_id}?format=json
+#### GET /api/display/render/\{plugin_name\}:\{section_id\}?format=json
 渲染特定显示部分。
 
 **查询参数**：

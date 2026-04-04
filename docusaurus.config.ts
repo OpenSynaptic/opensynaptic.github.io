@@ -31,6 +31,12 @@ const config: Config = {
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+        direction: 'ltr',
+      },
+    },
   },
 
   presets: [
@@ -39,11 +45,11 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Multi-language docs structure: docs/opensynaptic/en_GB and zh_CN
+          // Multi-language docs structure: use en_GB as primary
           editUrl:
             'https://github.com/opensynaptic/opensynaptic.github.io/tree/main/',
-          // Configure to use docs/opensynaptic as the base for all locales
-          path: 'docs/opensynaptic',
+          // Configure to use docs/opensynaptic/en_GB as the base
+          path: 'docs/opensynaptic/en_GB',
         },
         blog: {
           showReadingTime: true,
