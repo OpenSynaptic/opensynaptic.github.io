@@ -30,10 +30,14 @@ const config: Config = {
   // Internationalization configuration
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'zh-CN'],
     localeConfigs: {
       en: {
         label: 'English',
+        direction: 'ltr',
+      },
+      'zh-CN': {
+        label: '中文',
         direction: 'ltr',
       },
     },
@@ -70,22 +74,6 @@ const config: Config = {
     ],
   ],
 
-  plugins: [
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'docs-zh',
-        path: 'docs/opensynaptic/zh_CN',
-        routeBasePath: 'docs/zh',
-        sidebarPath: './sidebars.zh.ts',
-        include: ['**/*.{md,mdx}'],
-        exclude: ['**/_*.md'],
-        editUrl:
-          'https://github.com/opensynaptic/opensynaptic.github.io/tree/main/',
-      },
-    ],
-  ],
-
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
@@ -107,19 +95,8 @@ const config: Config = {
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          type: 'dropdown',
-          label: 'Language',
+          type: 'localeDropdown',
           position: 'right',
-          items: [
-            {
-              label: 'English',
-              to: '/docs/intro',
-            },
-            {
-              label: '中文',
-              to: '/docs/zh/intro',
-            },
-          ],
         },
         {
           href: 'https://github.com/opensynaptic/opensynaptic.github.io',
