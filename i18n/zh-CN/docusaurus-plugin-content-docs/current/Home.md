@@ -1,14 +1,16 @@
+---
+title: 🎯 OpenSynaptic Wiki
+---
+
 # 🎯 OpenSynaptic Wiki
 
 <div align="center">
 
-**A 2-N-2 IoT Protocol Stack** — Standardize • Compress • Dispatch
+**2-N-2 物联网协议栈** - 标准化 • 压缩 • 分发
 
-[![Latest Release](https://img.shields.io/badge/release-v1.1.0-blue?style=flat-square)](../en_GB/releases-v1.1.0)
-[![Documentation](https://img.shields.io/badge/docs-201%20pages-brightgreen?style=flat-square)](../en_GB/INDEX)
+[![Latest Release](https://img.shields.io/badge/release-v1.1.0-blue?style=flat-square)](releases/releases-v1.1.0)
+[![Documentation](https://img.shields.io/badge/docs-OpenSynaptic-brightgreen?style=flat-square)](INDEX)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/opensynaptic/opensynaptic/blob/main/LICENSE)
-[![Status](https://img.shields.io/badge/status-Active-success?style=flat-square)]()
-[![Languages](https://img.shields.io/badge/languages-EN%20%7C%20 中文-orange?style=flat-square)]()
 
 [GitHub](https://github.com/opensynaptic/opensynaptic) • [Issues](https://github.com/opensynaptic/opensynaptic/issues) • [Discussions](https://github.com/opensynaptic/opensynaptic/discussions)
 
@@ -16,303 +18,84 @@
 
 ---
 
-## 🌍 Language Selection
+## 欢迎来到 OpenSynaptic
 
-<table width="100%">
-  <tr>
-    <td width="50%" align="center">
-      <h3>🇬🇧 English</h3>
-      <p><strong>Full documentation in English</strong></p>
-      <p>
-        <a href="/docs/Home"><strong>→ Full Navigation</strong></a><br/>
-        <a href="/docs/intro">Installation</a> • 
-        <a href="/docs/ARCHITECTURE">Architecture</a> • 
-        <a href="/docs/QUICK_START">Quick Start</a>
-      </p>
-    </td>
-    <td width="50%" align="center">
-      <h3>🇨🇳 中文</h3>
-      <p><strong>全部中文文档</strong></p>
-      <p>
-        <a href="/docs/zh/Home"><strong>→ 🇨🇳 中文首页</strong></a><br/>
-        <a href="/docs/zh/Navigation"><strong>→ 完整导航</strong></a><br/>
-        <a href="/docs/zh/Home">安装指南</a> • 
-        <a href="/docs/zh/Home">架构</a> • 
-        <a href="/docs/zh/Home">快速开始</a>
-      </p>
-    </td>
-  </tr>
-</table>
+这是 OpenSynaptic 中文文档入口页。你可以从这里快速进入架构、API、配置、插件、发布说明和技术报告。
+
+### 🌍 语言入口
+
+- [中文完整导航](Navigation)
+- [English Home](/docs/Home)
+
+### 🚀 常用入口
+
+- [快速开始指南](QUICK_START)
+- [README（安装与项目说明）](README)
+- [核心 API 指南](CORE_API)
+- [OpenSynaptic 系统架构](ARCHITECTURE)
+- [ID 租赁系统](ID_LEASE_SYSTEM)
 
 ---
 
-## 🎯 Choose Your Path
+## 📦 OpenSynaptic 是什么
 
-<table width="100%">
-  <tr>
-    <td align="center" width="25%">
-      <h3>👨‍💼</h3>
-      <h4>First Time?</h4>
-      <p>New to OpenSynaptic?</p>
-      [**Get Started →**](../en_GB/README)
-    </td>
-    <td align="center" width="25%">
-      <h3>🔧</h3>
-      <h4>Operator</h4>
-      <p>Deploy & manage</p>
-      [**Configure →**](../en_GB/Navigation-EN)
-    </td>
-    <td align="center" width="25%">
-      <h3>🔌</h3>
-      <h4>Developer</h4>
-      <p>Build plugins</p>
-      [**Dev Guide →**](../en_GB/plugins-PLUGIN_DEVELOPMENT_SPECIFICATION_2026)
-    </td>
-    <td align="center" width="25%">
-      <h3>📚</h3>
-      <h4>Architecture</h4>
-      <p>Understand system</p>
-      [**Learn →**](../en_GB/ARCHITECTURE)
-    </td>
-  </tr>
-</table>
+| 维度 | 说明 |
+| --- | --- |
+| 核心目标 | 统一、压缩并分发异构传感网络的数据流 |
+| 处理链路 | `sensors -> standardize(UCUM) -> compress(Base62) -> fuse(FULL/DIFF) -> dispatch(transport)` |
+| 关键能力 | Python/Rust 双后端、可插拔传输器、ID 租赁、TUI + Web UI |
+| 适用场景 | 传感网络、边缘网关、协议桥接、异构设备管理 |
 
 ---
 
-## 📦 What is OpenSynaptic?
+## 📚 文档总览
 
-<table width="100%">
-  <tr>
-    <th align="left" width="30%">Aspect</th>
-    <th align="left" width="70%">Description</th>
-  </tr>
-  <tr>
-    <td><strong>Core Purpose</strong></td>
-    <td>2-N-2 IoT protocol stack for standardizing, compressing, and dispatching sensor data across heterogeneous networks</td>
-  </tr>
-  <tr>
-    <td><strong>Pipeline</strong></td>
-    <td><code>sensors → standardize (UCUM) → compress (Base62) → fuse (FULL/DIFF) → dispatch (transport)</code></td>
-  </tr>
-  <tr>
-    <td><strong>Key Features</strong></td>
-    <td>Multi-language backends (Python, Rust), pluggable transporters (UDP, MQTT, UART), device ID leasing, TUI + Web UI</td>
-  </tr>
-  <tr>
-    <td><strong>Scalability</strong></td>
-    <td>Tested on 1M+ messages, 12 protocol types, stress tested up to 200 concurrent workers</td>
-  </tr>
-  <tr>
-    <td><strong>Use Cases</strong></td>
-    <td>Sensor networks, edge computing, IoT gateways, protocol bridging, heterogeneous device management</td>
-  </tr>
-</table>
+### 🏗️ 架构
+- [OpenSynaptic 系统架构](ARCHITECTURE)
+- [文档组织](DOCUMENT_ORGANIZATION)
+- [文档组织报告（最终版）](DOCUMENTATION_ORGANIZATION_FINAL)
 
----
+### ⚙️ API
+- [OpenSynaptic API 参考](API)
+- [核心 API 指南](CORE_API)
+- [Rscore API 设计](RSCORE_API)
+- [Pycore -> Rscore Rust API 规范](PYCORE_RUST_API)
 
-## ⚡ Quick Commands
+### 📋 指南与配置
+- [快速开始指南](QUICK_START)
+- [Config.json 架构参考](CONFIG_SCHEMA)
+- [ID 租赁配置速查表](ID_LEASE_CONFIG_REFERENCE)
+- [传输器插件指南](TRANSPORTER_PLUGIN)
 
-```powershell
-# Install and run
-pip install -e .
-os-node demo --open-browser
+### 🌍 国际化
+- [国际化（多语言）支持](I18N)
+- [多语言文档指南](MULTI_LANGUAGE_GUIDE)
 
-# Run tests
-py -3 -m pytest --cov=opensynaptic tests
-python scripts/integration_test.py
-
-# Plugin development
-python -u src/main.py plugin-test --suite component
-python -u src/main.py plugin-test --suite integration
-
-# System information
-python -u src/main.py native-check
-python -u src/main.py core --set rscore --persist
-```
+### 📊 发布与报告
+- [发布文档](releases/releases-v1.1.0)
+- [报告目录（自动生成）](reports/reports-CODE_CHANGES_SUMMARY)
+- [文档完成报告](COMPLETION_REPORT)
 
 ---
 
-## 📋 Documentation Highlights
+## 🧩 产品文档空间
 
-<table width="100%">
-  <tr>
-    <th align="center">🏗️ Architecture</th>
-    <th align="center">🔌 APIs</th>
-    <th align="center">⚙️ Configuration</th>
-    <th align="center">🎯 Guides</th>
-  </tr>
-  <tr>
-    <td>
-      • [Core Architecture](../en_GB/ARCHITECTURE)<br/>
-      • [Design Evolution](../en_GB/architecture-ARCHITECTURE_EVOLUTION_COMPARISON)<br/>
-      • [FFI Analysis](../en_GB/architecture-ARCHITECTURE_FFI_ANALYSIS)<br/>
-      • [API Spec](../en_GB/API)
-    </td>
-    <td>
-      • [Core API](../en_GB/CORE_API)<br/>
-      • [Pycore/Rust](../en_GB/PYCORE_RUST_API)<br/>
-      • [Rscore API](../en_GB/RSCORE_API)<br/>
-      • [Display API](../en_GB/guides-DISPLAY_API_GUIDE)
-    </td>
-    <td>
-      • [Config Schema](../en_GB/CONFIG_SCHEMA)<br/>
-      • [ID Lease System](../en_GB/ID_LEASE_SYSTEM)<br/>
-      • [Feature Toggles](../en_GB/features-FEATURE_TOGGLE_GUIDE)<br/>
-      • [Quick Ref](../en_GB/ID_LEASE_CONFIG_REFERENCE)
-    </td>
-    <td>
-      • [TUI Guide](../en_GB/guides-TUI_QUICK_REFERENCE)<br/>
-      • [Web Commands](../en_GB/guides-WEB_COMMANDS_REFERENCE)<br/>
-      • [Drivers Ref](../en_GB/guides-drivers-quick-reference)<br/>
-      • [Restart Guide](../en_GB/guides-RESTART_COMMAND_GUIDE)
-    </td>
-  </tr>
-</table>
+- [OSynaptic-FX 文档](/docs/osynaptic-fx/intro)
+- [Nexa 文档](/docs/nexa/intro)
 
 ---
 
-## 🔧 Common Tasks
+## 🔧 维护与内部资料
 
-<table width="100%">
-  <tr>
-    <th align="left">I want to...</th>
-    <th align="left">Go to...</th>
-  </tr>
-  <tr>
-    <td>Install OpenSynaptic</td>
-    <td>[README](../en_GB/README) → [Quick Start](../en_GB/QUICK_START)</td>
-  </tr>
-  <tr>
-    <td>Understand the system design</td>
-    <td>[Architecture](../en_GB/ARCHITECTURE) → [Core API](../en_GB/CORE_API)</td>
-  </tr>
-  <tr>
-    <td>Configure my deployment</td>
-    <td>[Config Schema](../en_GB/CONFIG_SCHEMA) → [ID Lease](../en_GB/ID_LEASE_SYSTEM)</td>
-  </tr>
-  <tr>
-    <td>Manage device IDs</td>
-    <td>[ID Lease System](../en_GB/ID_LEASE_SYSTEM) → [ID Lease Config](../en_GB/ID_LEASE_CONFIG_REFERENCE)</td>
-  </tr>
-  <tr>
-    <td>Build a custom plugin</td>
-    <td>[Plugin Spec](../en_GB/plugins-PLUGIN_DEVELOPMENT_SPECIFICATION_2026) → [Starter Kit](../en_GB/plugins-PLUGIN_STARTER_KIT)</td>
-  </tr>
-  <tr>
-    <td>Use the Terminal UI</td>
-    <td>[TUI Quick Reference](../en_GB/guides-TUI_QUICK_REFERENCE) → [Display API](../en_GB/guides-DISPLAY_API_GUIDE)</td>
-  </tr>
-  <tr>
-    <td>Configure network transports</td>
-    <td>[Transporter Plugin](../en_GB/TRANSPORTER_PLUGIN) → [Port Forwarder](../en_GB/features-PORT_FORWARDER_COMPLETE_GUIDE)</td>
-  </tr>
-  <tr>
-    <td>Optimize for performance</td>
-    <td>[Performance Report](../en_GB/reports-FINAL_PERFORMANCE_REPORT) → [Perf Playbooks](../en_GB/internal-PHASE1_PERF_PLAYBOOK)</td>
-  </tr>
-  <tr>
-    <td>Set up graceful restarts</td>
-    <td>[Restart Guide](../en_GB/guides-RESTART_COMMAND_GUIDE)</td>
-  </tr>
-  <tr>
-    <td>Check implementation status</td>
-    <td>[Implementation Complete](../en_GB/reports-IMPLEMENTATION_COMPLETE) → [Changelog](../en_GB/reports-CHANGELOG_2026M03_24)</td>
-  </tr>
-</table>
-
----
-
-## 📊 Wiki Statistics
-
-<table width="100%">
-  <tr>
-    <th align="center">📍 Metric</th>
-    <th align="center">📈 Value</th>
-  </tr>
-  <tr>
-    <td><strong>Total Pages</strong></td>
-    <td>201</td>
-  </tr>
-  <tr>
-    <td><strong>English Documents</strong></td>
-    <td>110+</td>
-  </tr>
-  <tr>
-    <td><strong>Chinese Documents (中文)</strong></td>
-    <td>91+</td>
-  </tr>
-  <tr>
-    <td><strong>Plugin Resources</strong></td>
-    <td>8+</td>
-  </tr>
-  <tr>
-    <td><strong>Technical Reports</strong></td>
-    <td>12+</td>
-  </tr>
-  <tr>
-    <td><strong>Last Updated</strong></td>
-    <td>2026-04-04</td>
-  </tr>
-</table>
-
----
-
-## 🌳 Knowledge Base Structure
-
-```
-OpenSynaptic Wiki Root
-├── 📍 Home (This page)
-├── 📍 Navigation-EN (Full English Index)
-├── 📍 Navigation-ZH (完整中文索引)
-│
-├── 📚 Core Documentation (../en_GB/README, en-ARCHITECTURE, en-API, etc.)
-├── 🏗️ Architecture & Design (../en_GB/architecture-*)
-├── 🔌 APIs & Bindings (../en_GB/CORE_API, en-PYCORE_RUST_API, en-RSCORE_API)
-├── ⚙️ Configuration (../en_GB/CONFIG_SCHEMA, en-ID_LEASE_SYSTEM)
-├── 🎯 Features (../en_GB/features-*)
-├── 🔧 Guides & Tutorials (../en_GB/guides-*)
-├── 🎨 Plugin Development (../en_GB/plugins-*)
-├── 📦 Releases (../en_GB/releases-*)
-├── 📊 Technical Reports (../en_GB/reports-*)
-└── 📋 Internal Resources (../en_GB/internal-*)
-```
-
----
-
-## 🚀 Getting Started in 3 Steps
-
-| Step | Action | Link |
-|------|--------|------|
-| **1️⃣ Install** | Follow installation guide for your platform | [README](../en_GB/README) |
-| **2️⃣ Run** | Start the demo and explore the UI | [Quick Start](../en_GB/QUICK_START) |
-| **3️⃣ Learn** | Choose your path and dive into documentation | See [Roles](#-choose-your-path) above |
-
----
-
-## 🌐 Navigation & Support
-
-### Full Documentation Index
-- **[English Navigation](../en_GB/Navigation-EN)** — Complete guide to all English documentation
-- **[中文导航](Navigation-ZH)** — 完整的中文文档导航
-
-### Community & Support
-- 🐙 [GitHub Repository](https://github.com/opensynaptic/opensynaptic) — Source code and issues
-- 💬 [Discussions](https://github.com/opensynaptic/opensynaptic/discussions) — Ask questions and share ideas
-- 🐛 [Issue Tracker](https://github.com/opensynaptic/opensynaptic/issues) — Report bugs and request features
-
-### Project Status
-- ✅ Latest version: **v1.1.0**
-- ✅ License: **MIT**
-- ✅ Languages: **English & 中文**
-- ✅ Platforms: **Windows, Linux, macOS**
+- [OpenSynaptic 完整导航](Navigation)
+- [根目录文档清理报告](ROOT_CLEANUP_COMPLETE)
+- [内部文档](internal/internal-README)
 
 ---
 
 <div align="center">
 
-**Made with ❤️ for the IoT community**
-
-[⬆ Back to top](#-opensynaptic-wiki)
+最后更新：2026-04-05
 
 </div>
 

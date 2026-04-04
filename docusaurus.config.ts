@@ -104,7 +104,7 @@ const config: Config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'osynaptic-fx',
-        path: 'docs/opensynaptic/osynaptic-fx',
+        path: 'docs/osynaptic-fx',
         routeBasePath: 'docs/osynaptic-fx',
         sidebarPath: './sidebars.osynaptic-fx.ts',
         include: ['**/*.{md,mdx}'],
@@ -116,7 +116,7 @@ const config: Config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'nexa',
-        path: 'docs/opensynaptic/nexa',
+        path: 'docs/nexa',
         routeBasePath: 'docs/nexa',
         sidebarPath: './sidebars.nexa.ts',
         include: ['**/*.{md,mdx}'],
@@ -143,21 +143,21 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Docs',
+          label: '文档',
         },
         {
           type: 'docSidebar',
           docsPluginId: 'extensions',
           sidebarId: 'extensionsSidebar',
           position: 'left',
-          label: 'Extensions',
+          label: '扩展',
         },
         {
           type: 'docSidebar',
           docsPluginId: 'playbooks',
           sidebarId: 'playbooksSidebar',
           position: 'left',
-          label: 'Playbooks',
+          label: '操作手册',
         },
         {
           type: 'docSidebar',
@@ -173,7 +173,11 @@ const config: Config = {
           position: 'left',
           label: 'Nexa',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {
+          to: '/blog',
+          label: '博客',
+          position: 'left',
+        },
         {
           type: 'localeDropdown',
           position: 'right',
@@ -189,16 +193,16 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: '文档',
           items: [
             {
-              label: 'Tutorial',
+              label: '教程',
               to: '/docs/intro',
             },
           ],
         },
         {
-          title: 'Community',
+          title: '社区',
           items: [
             {
               label: 'Stack Overflow',
@@ -215,10 +219,10 @@ const config: Config = {
           ],
         },
         {
-          title: 'More',
+          title: '更多',
           items: [
             {
-              label: 'Blog',
+              label: '博客',
               to: '/blog',
             },
              {

@@ -1,0 +1,123 @@
+{
+  "navbar.docs": {
+    "message": "文档",
+    "description": "Navbar Docs label"
+  },
+  "navbar.extensions": {
+    "message": "扩展",
+    "description": "Navbar Extensions label"
+  },
+  "navbar.playbooks": {
+    "message": "操作手册",
+    "description": "Navbar Playbooks label"
+  },
+  "navbar.osynapticFx": {
+    "message": "OSynaptic-FX",
+    "description": "Navbar OSynaptic-FX label"
+  },
+  "navbar.nexa": {
+    "message": "Nexa",
+    "description": "Navbar Nexa label"
+  },
+  "navbar.blog": {
+    "message": "博客",
+    "description": "Navbar Blog label"
+  },
+  "navbar.github": {
+    "message": "GitHub",
+    "description": "Navbar GitHub label"
+  },
+  "footer.docs.title": {
+    "message": "文档",
+    "description": "Footer docs column title"
+  },
+  "footer.docs.tutorial": {
+    "message": "教程",
+    "description": "Footer tutorial link"
+  },
+  "footer.community.title": {
+    "message": "社区",
+    "description": "Footer community column title"
+  },
+  "footer.community.stackOverflow": {
+    "message": "Stack Overflow",
+    "description": "Footer Stack Overflow link"
+  },
+  "footer.community.discord": {
+    "message": "Discord",
+    "description": "Footer Discord link"
+  },
+  "footer.community.x": {
+    "message": "X",
+    "description": "Footer X link"
+  },
+  "footer.more.title": {
+    "message": "更多",
+    "description": "Footer more column title"
+  },
+  "footer.more.blog": {
+    "message": "博客",
+    "description": "Footer blog link"
+  },
+  "footer.more.github": {
+    "message": "GitHub",
+    "description": "Footer GitHub link"
+  },
+  "sidebar.docsCenter": {
+    "message": "📚 文档中心",
+    "description": "Sidebar documentation center category"
+  },
+  "sidebar.quickStart": {
+    "message": "🚀 快速开始",
+    "description": "Sidebar quick start category"
+  },
+  "sidebar.tutorials": {
+    "message": "📖 教程",
+    "description": "Sidebar tutorials category"
+  },
+  "sidebar.architecture": {
+    "message": "🏗️ 架构",
+    "description": "Sidebar architecture category"
+  },
+  "sidebar.coreApi": {
+    "message": "⚙️ 核心 API",
+    "description": "Sidebar core api category"
+  },
+  "sidebar.features": {
+    "message": "✨ 功能特性",
+    "description": "Sidebar features category"
+  },
+  "sidebar.guides": {
+    "message": "📋 指南",
+    "description": "Sidebar guides category"
+  },
+  "sidebar.plugins": {
+    "message": "🔌 插件",
+    "description": "Sidebar plugins category"
+  },
+  "sidebar.i18n": {
+    "message": "🌍 国际化",
+    "description": "Sidebar internationalization category"
+  },
+  "sidebar.releasesReports": {
+    "message": "📊 发布与报告",
+    "description": "Sidebar releases and reports category"
+  },
+  "sidebar.products": {
+    "message": "🧩 产品",
+    "description": "Sidebar products category"
+  },
+  "sidebar.products.osynapticFx": {
+    "message": "OSynaptic-FX 文档",
+    "description": "Sidebar OSynaptic-FX docs link"
+  },
+  "sidebar.products.nexa": {
+    "message": "Nexa 文档",
+    "description": "Sidebar Nexa docs link"
+  },
+  "sidebar.internal": {
+    "message": "🔧 内部",
+    "description": "Sidebar internal category"
+  }
+}
+

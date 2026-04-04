@@ -4,7 +4,7 @@ const sidebars: SidebarsConfig = {
   tutorialSidebar: [
     {
       type: 'category',
-      label: '📚 Documentation Center',
+      label: '📚 文档中心',
       collapsible: true,
       collapsed: false,
       items: [
@@ -14,7 +14,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: '🚀 Quick Start',
+      label: '🚀 快速开始',
       collapsible: true,
       collapsed: false,
       items: [
@@ -24,7 +24,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: '📖 Tutorials',
+      label: '📖 教程',
       collapsible: true,
       collapsed: false,
       items: [
@@ -40,7 +40,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: '🏗️ Architecture',
+      label: '🏗️ 架构',
       collapsible: true,
       collapsed: false,
       items: [
@@ -55,7 +55,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: '⚙️ Core API',
+      label: '⚙️ 核心 API',
       collapsible: true,
       collapsed: false,
       items: [
@@ -70,7 +70,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: '✨ Features',
+      label: '✨ 功能特性',
       collapsible: true,
       collapsed: false,
       items: [
@@ -82,7 +82,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: '📋 Guides',
+      label: '📋 指南',
       collapsible: true,
       collapsed: false,
       items: [
@@ -99,7 +99,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: '🔌 Plugins',
+      label: '🔌 插件',
       collapsible: true,
       collapsed: false,
       items: [
@@ -112,7 +112,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: '🌍 Internationalization',
+      label: '🌍 国际化',
       collapsible: true,
       collapsed: false,
       items: [
@@ -123,7 +123,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: '📊 Releases & Reports',
+      label: '📊 发布与报告',
       collapsible: true,
       collapsed: false,
       items: [
@@ -140,25 +140,25 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: '🧩 Products',
+      label: '🧩 产品',
       collapsible: true,
       collapsed: false,
       items: [
         {
           type: 'link',
-          label: 'OSynaptic-FX Docs',
+          label: 'OSynaptic-FX 文档',
           href: '/docs/osynaptic-fx/intro',
         },
         {
           type: 'link',
-          label: 'Nexa Docs',
+          label: 'Nexa 文档',
           href: '/docs/nexa/intro',
         },
       ],
     },
     {
       type: 'category',
-      label: '🔧 Internal',
+      label: '🔧 内部',
       collapsible: true,
       collapsed: false,
       items: [
