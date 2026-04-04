@@ -100,6 +100,30 @@ const config: Config = {
           'https://github.com/opensynaptic/opensynaptic.github.io/tree/main/',
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'osynaptic-fx',
+        path: 'docs/opensynaptic/osynaptic-fx',
+        routeBasePath: 'docs/osynaptic-fx',
+        sidebarPath: './sidebars.osynaptic-fx.ts',
+        include: ['**/*.{md,mdx}'],
+        editUrl:
+          'https://github.com/opensynaptic/opensynaptic.github.io/tree/main/',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'nexa',
+        path: 'docs/opensynaptic/nexa',
+        routeBasePath: 'docs/nexa',
+        sidebarPath: './sidebars.nexa.ts',
+        include: ['**/*.{md,mdx}'],
+        editUrl:
+          'https://github.com/opensynaptic/opensynaptic.github.io/tree/main/',
+      },
+    ],
   ],
 
   themeConfig: {
@@ -134,6 +158,20 @@ const config: Config = {
           sidebarId: 'playbooksSidebar',
           position: 'left',
           label: 'Playbooks',
+        },
+        {
+          type: 'docSidebar',
+          docsPluginId: 'osynaptic-fx',
+          sidebarId: 'osynapticFxSidebar',
+          position: 'left',
+          label: 'OSynaptic-FX',
+        },
+        {
+          type: 'docSidebar',
+          docsPluginId: 'nexa',
+          sidebarId: 'nexaSidebar',
+          position: 'left',
+          label: 'Nexa',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {

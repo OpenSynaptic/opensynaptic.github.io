@@ -118,7 +118,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'I18N',
         'MULTI_LANGUAGE_GUIDE',
-        'LOCALIZATION_SUMMARY',
+        'INDEX',
       ],
     },
     {
@@ -136,7 +136,24 @@ const sidebars: SidebarsConfig = {
           dirName: 'reports',
         },
         'COMPLETION_REPORT',
-        'TRANSLATION_FINAL_REPORT',
+      ],
+    },
+    {
+      type: 'category',
+      label: '🧩 Products',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        {
+          type: 'link',
+          label: 'OSynaptic-FX Docs',
+          href: '/docs/osynaptic-fx/intro',
+        },
+        {
+          type: 'link',
+          label: 'Nexa Docs',
+          href: '/docs/nexa/intro',
+        },
       ],
     },
     {
