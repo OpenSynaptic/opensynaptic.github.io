@@ -18,22 +18,23 @@ title: 🎯 OpenSynaptic Wiki
 
 ---
 
-## 欢迎来到 OpenSynaptic
+## 欢迎来到 OpenSynaptic 文档中心
 
-这是 OpenSynaptic 中文文档入口页。你可以从这里快速进入架构、API、配置、插件、发布说明和技术报告。
+欢迎来到 OpenSynaptic 文档中心。
 
 ### 🌍 语言入口
 
-- [中文完整导航](Navigation)
+- [中文首页](/zh-CN/docs/Home)
+- [中文完整导航](/zh-CN/docs/Navigation)
 - [English Home](/docs/Home)
+- [English Navigation](/docs/Navigation)
 
-### 🚀 常用入口
+### 🚀 快速开始
 
-- [快速开始指南](QUICK_START)
-- [README（安装与项目说明）](/zh-CN/docs/readme)
-- [核心 API 指南](CORE_API)
-- [OpenSynaptic 系统架构](ARCHITECTURE)
-- [ID 租赁系统](ID_LEASE_SYSTEM)
+- [文档索引](/zh-CN/docs/index)
+- [快速开始](QUICK_START)
+- [系统架构](ARCHITECTURE)
+- [API 概览](API)
 
 ---
 
@@ -98,4 +99,3 @@ title: 🎯 OpenSynaptic Wiki
 最后更新：2026-04-05
 
 </div>
-

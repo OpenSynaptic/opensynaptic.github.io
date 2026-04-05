@@ -143,21 +143,21 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: '文档',
+          label: 'Docs',
         },
         {
           type: 'docSidebar',
           docsPluginId: 'extensions',
           sidebarId: 'extensionsSidebar',
           position: 'left',
-          label: '扩展',
+          label: 'Extensions',
         },
         {
           type: 'docSidebar',
           docsPluginId: 'playbooks',
           sidebarId: 'playbooksSidebar',
           position: 'left',
-          label: '操作手册',
+          label: 'Playbooks',
         },
         {
           type: 'docSidebar',
@@ -175,7 +175,7 @@ const config: Config = {
         },
         {
           to: '/blog',
-          label: '博客',
+          label: 'Blog',
           position: 'left',
         },
         {
@@ -193,16 +193,16 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: '文档',
+          title: 'Docs',
           items: [
             {
-              label: '教程',
+              label: 'Tutorial',
               to: '/docs/intro',
             },
           ],
         },
         {
-          title: '社区',
+          title: 'Community',
           items: [
             {
               label: 'Stack Overflow',
@@ -219,10 +219,10 @@ const config: Config = {
           ],
         },
         {
-          title: '更多',
+          title: 'More',
           items: [
             {
-              label: '博客',
+              label: 'Blog',
               to: '/blog',
             },
              {

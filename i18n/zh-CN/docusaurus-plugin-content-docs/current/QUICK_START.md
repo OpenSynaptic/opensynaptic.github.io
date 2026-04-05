@@ -97,7 +97,7 @@ os-node native-build
    - [plugins/PLUGIN_QUICK_REFERENCE_2026.md](plugins/plugins-PLUGIN_QUICK_REFERENCE_2026)
 
 2. **理解系统内部**：
-   - [README.md](/zh-CN/docs/readme)
+   - [文档索引](/zh-CN/docs/index)
    - [ARCHITECTURE.md](ARCHITECTURE)
    - [CORE_API.md](CORE_API)
 
@@ -115,7 +115,7 @@ os-node native-build
 ## 需要帮助？
 
 - 完整索引：[INDEX.md](/zh-CN/docs/index)
-- 文档中心：[README.md](/zh-CN/docs/readme)
+- 文档中心：[文档索引](/zh-CN/docs/index)
 - 项目根 README：[Repository README](https://github.com/opensynaptic/opensynaptic/blob/main/README.md)
 
 _最后更新：2026-04-04（本地工作区）_

@@ -431,7 +431,7 @@ A：错误记录到 `os_log` 并打印到终端 B。检查 Config.json 有效性
 
 ## 另请参阅
 
-- [README.md](/zh-CN/docs/readme) – CLI 快速参考
+- [文档索引](/zh-CN/docs/index) – CLI 快速参考
 - [src/opensynaptic/CLI/README.md](https://github.com/opensynaptic/opensynaptic/blob/main/src/opensynaptic/CLI/README.md) – 详细 CLI 示例
 - [ARCHITECTURE.md](/zh-CN/docs/ARCHITECTURE) – 系统架构
 - [CONFIG_SCHEMA.md](/zh-CN/docs/CONFIG_SCHEMA) – 配置参考

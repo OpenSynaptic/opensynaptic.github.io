@@ -395,7 +395,7 @@ cp docs/README.md docs/es/README.md
 - [Jekyll 文档](https://jekyllrb.com/)
 - [GitHub Pages 指南](https://docs.github.com/en/pages)
 - [Markdown 指南](https://www.markdownguide.org/)
-- [OpenSynaptic 主文档](/zh-CN/docs/readme)
+- [OpenSynaptic 文档索引](/zh-CN/docs/index)
 
 ---
 

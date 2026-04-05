@@ -12,7 +12,7 @@ Successfully integrated comprehensive documentation for the new `os-node restart
 ## Files Modified
 
 ### 1. **Root Documentation**
-- **[README.md](/docs/readme)** (Main Hub)
+- **[README.md](/docs/index)** (Main Hub)
   - Updated "Command Categories" section to include `restart`
   - Added `restart` command to the "All Commands" table with description
   - Location: Lines 395, 405
@@ -113,7 +113,7 @@ os-node restart --graceful --timeout 15 --host 192.168.1.100 --port 9090
 ## How to Use This Guide
 
 ### For Quick Learning
-1. Read the summary in [README.md](/docs/readme) line 405
+1. Read the summary in [README.md](/docs/index) line 405
 2. Try basic example: `os-node restart --graceful`
 3. Check CLI examples in [src/opensynaptic/CLI/README.md](https://github.com/opensynaptic/opensynaptic/blob/main/src/opensynaptic/CLI/README.md)
 
@@ -138,7 +138,7 @@ os-node restart --graceful --timeout 15 --host 192.168.1.100 --port 9090
 All guides properly link to related documents:
 
 ```markdown
-- [README.md](/docs/readme) – CLI Quick Reference
+- [README.md](/docs/index) – CLI Quick Reference
 - [src/opensynaptic/CLI/README.md](https://github.com/opensynaptic/opensynaptic/blob/main/src/opensynaptic/CLI/README.md) – Detailed CLI Examples
 - [ARCHITECTURE.md](/docs/ARCHITECTURE) – System Architecture
 - [CONFIG_SCHEMA.md](/docs/CONFIG_SCHEMA) – Configuration Reference

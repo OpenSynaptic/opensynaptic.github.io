@@ -64,47 +64,51 @@
     "description": "Footer GitHub link"
   },
   "sidebar.docsCenter": {
-    "message": "📚 文档中心",
+    "message": "文档中心",
     "description": "Sidebar documentation center category"
   },
   "sidebar.quickStart": {
-    "message": "🚀 快速开始",
+    "message": "快速开始",
     "description": "Sidebar quick start category"
   },
   "sidebar.tutorials": {
-    "message": "📖 教程",
+    "message": "教程",
     "description": "Sidebar tutorials category"
   },
   "sidebar.architecture": {
-    "message": "🏗️ 架构",
+    "message": "架构",
     "description": "Sidebar architecture category"
   },
-  "sidebar.coreApi": {
-    "message": "⚙️ 核心 API",
-    "description": "Sidebar core api category"
+  "sidebar.api": {
+    "message": "API",
+    "description": "Sidebar api category"
   },
   "sidebar.features": {
-    "message": "✨ 功能特性",
+    "message": "功能",
     "description": "Sidebar features category"
   },
   "sidebar.guides": {
-    "message": "📋 指南",
+    "message": "指南",
     "description": "Sidebar guides category"
   },
   "sidebar.plugins": {
-    "message": "🔌 插件",
+    "message": "插件",
     "description": "Sidebar plugins category"
   },
   "sidebar.i18n": {
-    "message": "🌍 国际化",
+    "message": "国际化",
     "description": "Sidebar internationalization category"
   },
-  "sidebar.releasesReports": {
-    "message": "📊 发布与报告",
-    "description": "Sidebar releases and reports category"
+  "sidebar.releases": {
+    "message": "发布",
+    "description": "Sidebar releases category"
+  },
+  "sidebar.reports": {
+    "message": "报告",
+    "description": "Sidebar reports category"
   },
   "sidebar.products": {
-    "message": "🧩 产品",
+    "message": "产品",
     "description": "Sidebar products category"
   },
   "sidebar.products.osynapticFx": {
@@ -116,8 +120,12 @@
     "description": "Sidebar Nexa docs link"
   },
   "sidebar.internal": {
-    "message": "🔧 内部",
+    "message": "内部",
     "description": "Sidebar internal category"
+  },
+  "sidebar.other": {
+    "message": "其他",
+    "description": "Sidebar other/meta category"
   }
 }
 
