@@ -1,29 +1,42 @@
-# OSynaptic-FX Documentation Library
+﻿# OSynaptic-FX Documentation Library
 
-This directory is the complete delivery doc set for OSynaptic-FX.
+This directory contains the complete delivery documentation library for `OSynaptic-FX`, with Arduino Libraries Manager delivery as the primary consumer path and native scripts as maintainer QA tooling.
+
+## Arduino-First Entry
+
+- Library metadata: `library.properties`
+- Arduino public include entry: `src/OSynapticFX.h`
+- Arduino practical sketches: `examples/`
+- Arduino example playbook: `docs/16-examples-cookbook.md`
 
 ## Reading Entry Points
 
-- [Documentation Home](/docs/osynaptic-fx/en_GB)
-- [Documentation Summary](/docs/osynaptic-fx/en_GB/SUMMARY)
-- [Overview](/docs/osynaptic-fx/en_GB/overview)
-- [Architecture](/docs/osynaptic-fx/en_GB/architecture)
-- [API Index](/docs/osynaptic-fx/en_GB/api-index)
-- [Plugin Scope and Commands](/docs/osynaptic-fx/en_GB/plugin-scope-and-commands)
-- [Port Forwarder](/docs/osynaptic-fx/en_GB/port-forwarder)
-- [CLI](/docs/osynaptic-fx/en_GB/cli)
-- [Quality Gate and Compiler Matrix](/docs/osynaptic-fx/en_GB/quality-gate-and-compiler-matrix)
-- [Release Notes](/docs/osynaptic-fx/en_GB/release-notes)
-- [Mirror Coverage Report](/docs/osynaptic-fx/en_GB/mirror-coverage-report)
-- [Release Acceptance Checklist](/docs/osynaptic-fx/en_GB/acceptance-checklist)
-- [Benchmark Method and Calibration](/docs/osynaptic-fx/en_GB/benchmark-method)
-- [Configuration Quick Reference](/docs/osynaptic-fx/en_GB/config-quick-reference)
-- [Performance Results Summary](/docs/osynaptic-fx/en_GB/performance-summary)
-- [Troubleshooting](/docs/osynaptic-fx/en_GB/troubleshooting)
-- [Release Process](/docs/osynaptic-fx/en_GB/release-playbook)
-- [Examples Cookbook](/docs/osynaptic-fx/en_GB/examples-cookbook)
-- [Glue Step-by-Step](/docs/osynaptic-fx/en_GB/glue-step-by-step)
-- [Standardized Units](/docs/osynaptic-fx/en_GB/standardized-units)
-- [Data Format Specification](/docs/osynaptic-fx/en_GB/data-format-specification)
-- [Input Specification](/docs/osynaptic-fx/en_GB/input-specification)
-- [Version Changelog](/docs/osynaptic-fx/en_GB/CHANGELOG)
+- Quick Navigation: `docs/SUMMARY.md`
+- Engineering Overview: `docs/01-overview.md`
+- Architecture Description: `docs/02-architecture.md`
+- API Index: `docs/03-api-index.md`
+- Plugin Scope and Commands: `docs/04-plugin-scope-and-commands.md`
+- Complete Port Forwarder Documentation: `docs/05-port-forwarder.md`
+- Lightweight CLI Usage: `docs/06-cli.md`
+- Quality Gate and Compiler Matrix: `docs/07-quality-gate-and-compiler-matrix.md`
+- Release Notes: `docs/08-release-notes.md`
+- Mirror Coverage Report: `docs/09-mirror-coverage-report.md`
+- Release Acceptance Checklist: `docs/10-acceptance-checklist.md`
+- Benchmark Method and Calibration: `docs/11-benchmark-method.md`
+- Configuration Quick Reference: `docs/12-config-quick-reference.md`
+- Performance Results Summary: `docs/13-performance-summary.md`
+- Troubleshooting: `docs/14-troubleshooting.md`
+- Release Process: `docs/15-release-playbook.md`
+- Detailed Examples Cookbook: `docs/16-examples-cookbook.md`
+- Glue Code Step-by-Step Explanation: `docs/17-glue-step-by-step.md`
+- Standardized Units Table: `docs/18-standardized-units.md`
+- Input Specification (Send Rules and Fields): `docs/19-input-specification.md`
+- Arduino Easy API: `docs/20-arduino-easy-api.md`
+- Version Changelog: `docs/CHANGELOG.md`
+
+## Current Documentation Baseline
+
+- Plugin Policy: Only includes `transport` (lite), `test_plugin` (lite), `port_forwarder` (full).
+- Explicit Exclusions: `web`, `sql`, `dependency_manager`, `env_guard`, and other service plugins.
+- Maintainer Quality Gate: Supports `clang/gcc/cl` matrix verification with report artifact at `build/quality_gate_report.md`.
+

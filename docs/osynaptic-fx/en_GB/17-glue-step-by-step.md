@@ -38,11 +38,11 @@ If your code still references section A content from old versions, recommend upd
 docs/18-data-format-specification.md#{section}
 ```
 
-For example: `18-data-format-specification.md` corresponds to original A.1 content in `17-glue-step-by-step.md`.
+For example: `18-data-format-specification.md#A.1` corresponds to original `17-glue-step-by-step.md#A.1`
 
 ### A.1 [Migrated] Data Frame (DATA_*) Wire Format
 
-See [18-data-format-specification.md](18-data-format-specification.md)
+See [18-data-format-specification.md#A.1](18-data-format-specification.md#A.1)
 
 ## 0. Goals
 
