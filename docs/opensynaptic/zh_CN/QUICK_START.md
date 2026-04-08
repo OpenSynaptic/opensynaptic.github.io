@@ -4,118 +4,199 @@ title: 快速开始指南
 language: zh
 ---
 
-# 快速文档查找
+# 快速开始
 
-使用此页面快速跳转到正确的文档集合。
+5 分钟内启动一个 OpenSynaptic 节点。
 
 ---
 
-## 运行时首次启动
+## 前置条件
 
-使用以下命令之一直接启动 `main`：
+| 要求 | 版本 |
+|---|---|
+| Python | 3.10 或更高 |
+| 操作系统 | Windows 10/11、Linux、macOS |
+| 磁盘空间 | ~50 MB |
+
+---
+
+## 第 1 步 — 克隆并安装
 
 ```powershell
-# Windows 快捷命令（无需 Activate.ps1）
-.\run-main.cmd run --once --quiet
-
-# 已安装的入口点
-os-node run --once --quiet
+git clone https://github.com/OpenSynaptic/OpenSynaptic.git
+cd OpenSynaptic
+pip install -e .
 ```
 
-如果首次运行时缺少本机运行时库，启动会自动尝试本机构建一次，然后重试节点创建。  
+验证安装：
+```powershell
+os-node --help
+```
+
+---
+
+## 第 2 步 — 一键运行演示
+
+`demo` 命令启动一个本地虚拟传感器循环，并自动打开 Web 管理面板：
+
+```powershell
+os-node demo --open-browser
+```
+
+此命令将：
+1. 在内存中创建临时 `Config.json`（不写入任何文件）
+2. 在 `http://127.0.0.1:8765/` 启动 `web_user` 插件
+3. 每 2 秒生成一次虚拟传感器数据包（温度、压力、电压）
+4. 在浏览器中打开管理面板
+
+面板包含设备标识、传输状态、管道指标和插件状态等实时数据。
+
+按 `Ctrl+C` 停止。
+
+---
+
+## 第 3 步 — 创建持久化配置
+
+使用向导生成真实节点的 `Config.json`：
+
+```powershell
+os-node wizard
+```
+
+或立即使用默认值：
+```powershell
+os-node init --default
+```
+
+这将在当前目录创建包含安全默认值的 `Config.json`：
+
+```json
+{
+  "device_id": "MY_NODE_01",
+  "VERSION": "1.3.1",
+  "engine_settings": { "precision": 6 },
+  "RESOURCES": {
+    "transporters_status": { "udp": true },
+    "service_plugins": {
+      "web_user": { "enabled": true, "port": 8765 }
+    }
+  }
+}
+```
+
+---
+
+## 第 4 步 — 启动节点
+
+```powershell
+os-node run --config Config.json
+```
+
+节点会持续运行，发送心跳包并处理传感器数据。
+
+一次性测试运行：
+```powershell
+os-node run --config Config.json --once
+```
+
+---
+
+## 第 5 步 — 启动 Web 面板
+
+```powershell
+os-node web-user --cmd start -- --host 127.0.0.1 --port 8765 --block
+```
+
+然后在浏览器中打开 **`http://127.0.0.1:8765/`**。
+
+也可以使用独立别名：
+```powershell
+os-web --cmd start -- --host 127.0.0.1 --port 8765 --block
+```
+
+---
+
+## 第 6 步 — 发送传感器读数
+
+```powershell
+os-node transmit --config Config.json --sensor-id V1 --value 3.14 --unit Pa --medium UDP
+```
+
+读数经过完整管道处理（标准化→压缩→融合→发送），通过 UDP 分发。
+
+---
+
+## 第 7 步 — 在终端查看节点状态
+
+```powershell
+# 所有分区的完整快照
+os-node tui --config Config.json
+
+# 单个分区（identity、config、transport、pipeline、plugins、db）
+os-node tui --config Config.json --section transport
+
+# 实时交互模式（Ctrl+C 停止）
+os-node tui --config Config.json --interactive --interval 2.0
+```
+
+---
+
+## 第 8 步 — 查看和编辑配置
+
+```powershell
+# 查看全部配置
+os-node config-show --config Config.json
+
+# 读取单个键
+os-node config-get --config Config.json --key engine_settings.precision
+
+# 写入值
+os-node config-set --config Config.json --key engine_settings.precision --value 8 --type int
+```
+
+---
+
+## 常用命令速查
+
+| 目标 | 命令 |
+|---|---|
+| 一键演示（含浏览器） | `os-node demo --open-browser` |
+| 使用向导生成配置 | `os-node wizard` |
+| 使用默认值生成配置 | `os-node init --default` |
+| 运行节点循环 | `os-node run --config Config.json` |
+| 单次测试运行 | `os-node run --config Config.json --once` |
+| TUI 快照 | `os-node tui --config Config.json` |
+| TUI 实时模式 | `os-node tui --config Config.json --interactive` |
+| 启动 Web 面板 | `os-web --cmd start -- --host 0.0.0.0 --port 8765 --block` |
+| 发送传感器值 | `os-node transmit --config Config.json --sensor-id S1 --value 1.0 --unit Pa --medium UDP` |
+| 启用传输器 | `os-node transporter-toggle --config Config.json --name udp --enable` |
+| 列出插件 | `os-node plugin-list --config Config.json` |
+| 检查本机库 | `os-node native-check` |
+| 构建本机库 | `os-node native-build` |
+
+---
+
+## 如果缺少本机库
+
+首次运行时，节点会自动尝试构建本机 C 绑定。如果构建失败（例如没有 C 编译器），会显示结构化错误，节点回退到纯 Python 模式。
+
 手动回退：
-
 ```powershell
-os-node native-check
-os-node native-build
+os-node native-check   # 诊断环境
+os-node native-build   # 显示进度并尝试构建
 ```
 
 ---
 
-## 我是..., 我想...
+## 接下来做什么
 
-### 新开发者
-- 快速入门 -> [plugins/PLUGIN_STARTER_KIT.md](plugins/plugins-PLUGIN_STARTER_KIT)
-- 理解架构 -> [ARCHITECTURE.md](ARCHITECTURE)
-- 构建第一个插件 -> [plugins/PLUGIN_DEVELOPMENT_SPECIFICATION.md](plugins/plugins-PLUGIN_DEVELOPMENT_SPECIFICATION)
+| 我想... | 前往... |
+|---|---|
+| 了解完整 CLI | [internal/CLI 参考](internal/internal-CLI_README) |
+| 在脚本中使用 Web API | [guides/Web API 参考](guides/guides-WEB_COMMANDS_REFERENCE) |
+| 了解 TUI 各分区含义 | [guides/TUI 快速参考](guides/guides-TUI_QUICK_REFERENCE) |
+| 开发插件 | [plugins/插件入门套件](plugins/plugins-PLUGIN_STARTER_KIT) |
+| 添加新传输协议 | [TRANSPORTER_PLUGIN.md](TRANSPORTER_PLUGIN) |
+| 理解系统架构 | [ARCHITECTURE.md](ARCHITECTURE) |
+| 查看 API 参考 | [API.md](API) |
 
-### 插件开发者
-- 开发规范 -> [plugins/PLUGIN_DEVELOPMENT_SPECIFICATION_2026.md](plugins/plugins-PLUGIN_DEVELOPMENT_SPECIFICATION_2026)
-- 快速参考 -> [plugins/PLUGIN_QUICK_REFERENCE_2026.md](plugins/plugins-PLUGIN_QUICK_REFERENCE_2026)
-- 传输器集成 -> [TRANSPORTER_PLUGIN.md](TRANSPORTER_PLUGIN)
-- 实用代码示例 -> [plugins/PLUGIN_HIJACKING_PRACTICAL_CODE.md](plugins/plugins-PLUGIN_HIJACKING_PRACTICAL_CODE)
-
-### API 集成者
-- API 概览 -> [API.md](API)
-- 显示 API 指南 -> [guides/DISPLAY_API_GUIDE.md](guides/guides-DISPLAY_API_GUIDE)
-- 显示 API 快速开始 -> [guides/DISPLAY_API_QUICKSTART.md](guides/guides-DISPLAY_API_QUICKSTART)
-- 配置架构 -> [CONFIG_SCHEMA.md](CONFIG_SCHEMA)
-
-### 系统操作员
-- 运行时配置 -> [CONFIG_SCHEMA.md](CONFIG_SCHEMA)
-- ID 租赁系统 -> [ID_LEASE_SYSTEM.md](ID_LEASE_SYSTEM)
-- ID 租赁配置参考 -> [ID_LEASE_CONFIG_REFERENCE.md](ID_LEASE_CONFIG_REFERENCE)
-- Web 命令参考 -> [guides/WEB_COMMANDS_REFERENCE.md](guides/guides-WEB_COMMANDS_REFERENCE)
-- TUI 快速参考 -> [guides/TUI_QUICK_REFERENCE.md](guides/guides-TUI_QUICK_REFERENCE)
-
-### 性能工程师
-- 优化报告 -> [reports/PERFORMANCE_OPTIMIZATION_REPORT.md](reports/reports-PERFORMANCE_OPTIMIZATION_REPORT)
-- 最终性能总结 -> [reports/FINAL_PERFORMANCE_REPORT.md](reports/reports-FINAL_PERFORMANCE_REPORT)
-- 架构演变分析 -> [architecture/ARCHITECTURE_EVOLUTION_COMPARISON.md](architecture/architecture-ARCHITECTURE_EVOLUTION_COMPARISON)
-
-### 故障排除
-- Bug 修复说明 -> [reports/BUG_FIX_REPORT.md](reports/reports-BUG_FIX_REPORT)
-- 模块导入修复 -> [internal/FIX_ModuleNotFoundError.md](internal/internal-FIX_ModuleNotFoundError)
-- Web 命令修复 -> [internal/WEB_COMMAND_FIX.md](internal/internal-WEB_COMMAND_FIX)
-- 所有报告 -> [reports/](reports/reports-CODE_CHANGES_SUMMARY)
-
-### 架构师 / 维护者
-- 架构 -> [ARCHITECTURE.md](ARCHITECTURE)
-- 核心 API -> [CORE_API.md](CORE_API)
-- FFI 分析 -> [architecture/ARCHITECTURE_FFI_ANALYSIS.md](architecture/architecture-ARCHITECTURE_FFI_ANALYSIS)
-- 文档结构 -> [DOCUMENT_ORGANIZATION.md](DOCUMENT_ORGANIZATION)
-
----
-
-## 类别概览
-
-- 架构和设计 -> `docs/architecture/`
-- API 参考 -> 根文档 + `docs/api/`
-- 功能指南 -> `docs/features/`
-- 插件开发 -> `docs/plugins/`
-- 用户/开发者指南 -> `docs/guides/`
-- 报告和日志 -> `docs/reports/`
-- 内部说明 -> `docs/internal/`
-
----
-
-## 典型工作流程
-
-1. **开始插件开发**：
-   - [plugins/PLUGIN_STARTER_KIT.md](plugins/plugins-PLUGIN_STARTER_KIT)
-   - [plugins/PLUGIN_DEVELOPMENT_SPECIFICATION_2026.md](plugins/plugins-PLUGIN_DEVELOPMENT_SPECIFICATION_2026)
-   - [plugins/PLUGIN_QUICK_REFERENCE_2026.md](plugins/plugins-PLUGIN_QUICK_REFERENCE_2026)
-
-2. **理解系统内部**：
-   - [文档索引](/zh-CN/docs/index)
-   - [ARCHITECTURE.md](ARCHITECTURE)
-   - [CORE_API.md](CORE_API)
-
-3. **集成 API**：
-   - [API.md](API)
-   - [guides/DISPLAY_API_GUIDE.md](guides/guides-DISPLAY_API_GUIDE)
-   - [CONFIG_SCHEMA.md](CONFIG_SCHEMA)
-
-4. **追踪变更**：
-   - [reports/CHANGELOG.md](reports/reports-CHANGELOG_2026M03_24)
-   - [reports/CODE_CHANGES_SUMMARY.md](reports/reports-CODE_CHANGES_SUMMARY)
-
----
-
-## 需要帮助？
-
-- 完整索引：[INDEX.md](/zh-CN/docs/index)
-- 文档中心：[文档索引](/zh-CN/docs/index)
-- 项目根 README：[Repository README](https://github.com/opensynaptic/opensynaptic/blob/main/README.md)
-
-_最后更新：2026-04-04（本地工作区）_

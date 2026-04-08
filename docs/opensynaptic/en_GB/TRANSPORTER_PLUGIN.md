@@ -8,196 +8,295 @@ How to write, register, and enable a new transporter for OpenSynaptic.
 
 OpenSynaptic's transport layer is split into three tiers:
 
-| Tier | Config key | Driver location | Examples |
-|---|---|---|---|
-| **Application** | `RESOURCES.application_status` | `services/transporters/drivers/` | MQTT, Matter, Zigbee |
-| **Transport** | `RESOURCES.transport_status` | `core/transport_layer/` | UDP, TCP, QUIC, lwIP, uIP |
-| **Physical** | `RESOURCES.physical_status` | `core/physical_layer/` | UART, RS-485, CAN, LoRa, Bluetooth |
+| Tier | Config key | Examples |
+|---|---|---|
+| **Application** | `RESOURCES.application_status` | MQTT, Matter, Zigbee |
+| **Transport** | `RESOURCES.transport_status` | UDP, TCP, QUIC, WebSocket |
+| **Physical** | `RESOURCES.physical_status` | UART, RS-485, CAN, LoRa, Bluetooth |
 
-Discovery behavior is layer-specific:
+Discovery behavior per tier:
 
-- Application layer: constrained by `TransporterService.APP_LAYER_DRIVERS`.
-- Transport layer: constrained by `TransportLayerManager._CANDIDATES`.
-- Physical layer: constrained by `PhysicalLayerManager._CANDIDATES`.
+- **Application layer**: each driver must be listed in `TransporterService.APP_LAYER_DRIVERS` to be discovered
+- **Transport layer**: each driver must be listed in `TransportLayerManager._CANDIDATES`
+- **Physical layer**: each driver must be listed in `PhysicalLayerManager._CANDIDATES`
 
-`ServiceManager` handles application-layer drivers; transport and physical layers are managed by their dedicated layer managers.
-
-Payload materialization is centralized by `opensynaptic.utils.buffer.to_wire_payload()` to keep zero-copy behavior consistent across application/transport/physical send paths.
+All three tiers share the same `send()` / `listen()` interface. The node's payload serialization pipeline produces binary frames that are handed off to your driver's `send()`.
 
 ---
 
 ## Required Interface
 
-Every transporter module must expose:
+Every transporter module must expose a `send()` function:
 
 ```python
 def send(payload: bytes, config: dict) -> bool:
     """
-    Send *payload* using whatever medium this driver implements.
+    Send a binary packet using this transport medium.
 
-    Parameters
-    ----------
-    payload : bytes   – pre-encoded binary packet (from OSVisualFusionEngine)
-    config  : dict    – merged node Config.json (full dict)
+    payload : bytes  — pre-encoded binary frame
+    config  : dict   — full Config.json dict (read-only)
 
-    Returns
-    -------
-    bool – True on success, False on any failure
+    Returns True on success, False on any failure.
     """
-    ...
+    raise NotImplementedError
 ```
 
-### Optional interface
+### Optional: receive loop
 
 ```python
 def listen(config: dict, callback) -> None:
     """
-    Start a blocking (or background-thread) receive loop.
+    Start a receive loop (blocking or background thread).
 
-    Parameters
-    ----------
-    config   : dict       – full node config
-    callback : callable   – called with (raw_bytes: bytes, addr: tuple) for every inbound packet
+    callback : callable — call with (raw_bytes: bytes, addr: tuple)
+                          for every packet received
     """
-    ...
+    raise NotImplementedError
 ```
 
 ---
 
-## Step-by-step: Adding a Transport-layer Driver
+## Adding a Transport-layer Driver (Example: WebSocket)
 
-### 1. Create the driver file
+### Step 1 — Implement the driver
 
-For a **transport-layer** driver (e.g. WebSocket), create:
-
-```
-src/opensynaptic/core/transport_layer/websocket.py
-```
-
-Implement at minimum:
+Create a Python module with a `send()` function:
 
 ```python
-# src/opensynaptic/core/transport_layer/websocket.py
-import websocket  # pip install websocket-client
+# websocket_driver.py
+import websocket   # pip install websocket-client
 
 def send(payload: bytes, config: dict) -> bool:
+    """Send payload over WebSocket."""
     try:
-        ws_cfg = config.get('RESOURCES', {}).get('transport_config', {}).get('websocket', {})
+        ws_cfg = (
+            config
+            .get('RESOURCES', {})
+            .get('transport_config', {})
+            .get('websocket', {})
+        )
         url = ws_cfg.get('url', 'ws://localhost:8765')
-        ws = websocket.create_connection(url, timeout=ws_cfg.get('timeout', 3.0))
+        timeout = float(ws_cfg.get('timeout', 3.0))
+        ws = websocket.create_connection(url, timeout=timeout)
         ws.send_binary(payload)
         ws.close()
         return True
-    except Exception as exc:
+    except Exception:
         return False
 ```
 
-### 2. Register in manager candidates and Config.json
+### Step 2 — Register in the layer manager candidates
 
-Add your driver key/module to the transport layer candidate tuple (`TransportLayerManager._CANDIDATES`) and then ensure `Config.json` has a status entry:
-
-```json
-"RESOURCES": {
-    "transport_status": {
-        "websocket": false
-    }
-}
-```
-
-Also add matching settings under `RESOURCES.transport_config` when needed.
-
-### 3. Enable the driver
-
-Via CLI:
-
-```powershell
-python -u src/main.py transporter-toggle --config Config.json --name websocket --enable
-```
-
-Or via `config-set`:
-
-```powershell
-python -u src/main.py config-set --config Config.json --key RESOURCES.transport_status.websocket --value true --type bool
-```
-
-Or directly in `Config.json`:
-
-```json
-"transport_status": {
-    "websocket": true
-}
-```
-
-### 4. Add optional config block
-
-Place driver-specific settings under the matching config key:
-
-```json
-"transport_config": {
-    "websocket": {
-        "url": "ws://192.168.1.100:8765",
-        "timeout": 3.0
-    }
-}
-```
-
-Access them inside `send()` via:
+Add your driver key and module path to `TransportLayerManager._CANDIDATES` (in the transport layer manager class). The candidates list maps driver name → importable module path:
 
 ```python
+_CANDIDATES = (
+    # ... existing entries ...
+    ('websocket', 'websocket_driver'),   # ← add your driver here
+)
+```
+
+### Step 3 — Add a Config.json status entry
+
+The driver will only activate if its key is `true` in `Config.json`:
+
+```json
+{
+  "RESOURCES": {
+    "transport_status": {
+      "websocket": false
+    }
+  }
+}
+```
+
+### Step 4 — Add an optional config block
+
+Place driver-specific configuration under `transport_config`:
+
+```json
+{
+  "RESOURCES": {
+    "transport_config": {
+      "websocket": {
+        "url": "ws://192.168.1.100:8765",
+        "timeout": 3.0
+      }
+    }
+  }
+}
+```
+
+Access inside `send()`:
+```python
 ws_cfg = config.get('RESOURCES', {}).get('transport_config', {}).get('websocket', {})
+url = ws_cfg.get('url', 'ws://localhost:8765')
+```
+
+### Step 5 — Enable the driver
+
+Via CLI:
+```powershell
+os-node transporter-toggle --config Config.json --name websocket --enable
+```
+
+Via `config-set`:
+```powershell
+os-node config-set --config Config.json --key RESOURCES.transport_status.websocket --value true --type bool
+```
+
+Via HTTP API (when web_user is running):
+```bash
+curl -X POST http://127.0.0.1:8765/api/transport \
+  -H "Content-Type: application/json" \
+  -d '{"medium": "websocket", "enabled": true}'
+```
+
+Directly in `Config.json`:
+```json
+{
+  "RESOURCES": {
+    "transport_status": {
+      "websocket": true
+    }
+  }
+}
 ```
 
 ---
 
-## Step-by-step: Adding an Application-layer Driver
+## Adding an Application-layer Driver (Example: Custom Protocol)
 
-Application-layer drivers live in `services/transporters/drivers/` and must be listed in `ServiceManager.APP_LAYER_DRIVERS` inside `services/transporters/main.py`.
-
-### 1. Create the driver file
-
-```
-src/opensynaptic/services/transporters/drivers/myapp.py
-```
-
-Minimal implementation:
+### Step 1 — Implement the driver
 
 ```python
+# myapp_driver.py
+
 def send(payload: bytes, config: dict) -> bool:
-    app_opts = config.get('application_options', {})
-    # ... send logic ...
-    return True
+    """Send via custom application protocol."""
+    app_cfg = (
+        config
+        .get('RESOURCES', {})
+        .get('application_config', {})
+        .get('myapp', {})
+    )
+    endpoint = app_cfg.get('endpoint', 'http://localhost:9000/ingest')
+    try:
+        import urllib.request
+        req = urllib.request.Request(
+            endpoint,
+            data=payload,
+            headers={'Content-Type': 'application/octet-stream'},
+            method='POST',
+        )
+        urllib.request.urlopen(req, timeout=5.0)
+        return True
+    except Exception:
+        return False
 ```
 
-### 2. Register in APP_LAYER_DRIVERS
+### Step 2 — Register in APP_LAYER_DRIVERS
 
-In `services/transporters/main.py`:
+Add the driver name to the application-layer transporter service's allowed set:
 
 ```python
 class TransporterService:
     APP_LAYER_DRIVERS = {'mqtt', 'matter', 'zigbee', 'myapp'}   # ← add here
 ```
 
-If the key is not listed here, the app-layer driver will not be loaded even if the file exists.
+Drivers **not** in this set will not be loaded even if the module exists and the status key is `true`.
 
-### 3. Enable in Config.json
+### Step 3 — Enable in Config.json
 
 ```json
-"application_status": {
-    "myapp": true
-},
-"application_config": {
-    "myapp": {
-        "endpoint": "https://..."
+{
+  "RESOURCES": {
+    "application_status": {
+      "myapp": true
+    },
+    "application_config": {
+      "myapp": {
+        "endpoint": "http://192.168.1.50:9000/ingest"
+      }
     }
+  }
 }
 ```
 
 ---
 
-## Step-by-step: Adding a Physical-layer Driver
+## Adding a Physical-layer Driver (Example: LoRa)
 
-Physical drivers live in `core/physical_layer/` and follow the same `send()` / `listen()` contract.  
-Register new protocols in `PhysicalLayerManager._CANDIDATES`, then enable them under `RESOURCES.physical_status`.
+Physical drivers follow the same `send()` / `listen()` interface.
+
+```python
+# lora_driver.py
+
+def send(payload: bytes, config: dict) -> bool:
+    """Send payload over LoRa via serial interface."""
+    phy_cfg = (
+        config
+        .get('RESOURCES', {})
+        .get('physical_config', {})
+        .get('lora', {})
+    )
+    port = phy_cfg.get('port', '/dev/ttyUSB0')
+    baudrate = int(phy_cfg.get('baudrate', 115200))
+    try:
+        import serial
+        with serial.Serial(port, baudrate, timeout=2.0) as ser:
+            ser.write(payload)
+        return True
+    except Exception:
+        return False
+
+
+def listen(config: dict, callback) -> None:
+    """Blocking LoRa receive loop — run in a background thread."""
+    import serial, time
+    phy_cfg = (
+        config.get('RESOURCES', {}).get('physical_config', {}).get('lora', {})
+    )
+    port = phy_cfg.get('port', '/dev/ttyUSB0')
+    baudrate = int(phy_cfg.get('baudrate', 115200))
+    with serial.Serial(port, baudrate, timeout=1.0) as ser:
+        while True:
+            data = ser.read(512)
+            if data:
+                callback(data, (port, 0))
+```
+
+Register in `PhysicalLayerManager._CANDIDATES` and enable under `RESOURCES.physical_status.lora = true`.
+
+---
+
+## Verifying Transport Status
+
+```powershell
+# Show all three layer status maps
+os-node transport-status --config Config.json
+
+# Show in TUI
+os-node tui --config Config.json --section transport
+```
+
+Via HTTP:
+```bash
+curl http://127.0.0.1:8765/api/transport
+```
+
+Expected response:
+```json
+{
+  "ok": true,
+  "transport": {
+    "active_transporters": ["udp", "websocket"],
+    "transporters_status": { "udp": true, "websocket": true },
+    "transport_status": { "quic": false },
+    "physical_status": { "lora": false }
+  }
+}
+```
 
 Example: add `bluetooth.py`:
 
