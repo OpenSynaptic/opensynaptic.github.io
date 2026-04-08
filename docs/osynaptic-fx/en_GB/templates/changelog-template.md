@@ -1,6 +1,6 @@
 ﻿# Changelog Entry Template
 
-## [<version>] - <yyyy-mm-dd>
+## [\<version\>] - \<yyyy-mm-dd\>
 
 ### Added
 
