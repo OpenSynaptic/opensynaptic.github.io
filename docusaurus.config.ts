@@ -124,6 +124,30 @@ const config: Config = {
           'https://github.com/opensynaptic/opensynaptic.github.io/tree/main/',
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'osynaptic-rx',
+        path: 'docs/osynaptic-rx',
+        routeBasePath: 'docs/osynaptic-rx',
+        sidebarPath: './sidebars.osynaptic-rx.ts',
+        include: ['**/*.{md,mdx}'],
+        editUrl:
+          'https://github.com/opensynaptic/opensynaptic.github.io/tree/main/',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'osynaptic-tx',
+        path: 'docs/osynaptic-tx',
+        routeBasePath: 'docs/osynaptic-tx',
+        sidebarPath: './sidebars.osynaptic-tx.ts',
+        include: ['**/*.{md,mdx}'],
+        editUrl:
+          'https://github.com/opensynaptic/opensynaptic.github.io/tree/main/',
+      },
+    ],
   ],
 
   themeConfig: {
@@ -174,6 +198,20 @@ const config: Config = {
           label: 'Nexa',
         },
         {
+          type: 'docSidebar',
+          docsPluginId: 'osynaptic-rx',
+          sidebarId: 'osynapticRxSidebar',
+          position: 'left',
+          label: 'OSynaptic-RX',
+        },
+        {
+          type: 'docSidebar',
+          docsPluginId: 'osynaptic-tx',
+          sidebarId: 'osynapticTxSidebar',
+          position: 'left',
+          label: 'OSynaptic-TX',
+        },
+        {
           to: '/blog',
           label: 'Blog',
           position: 'left',
@@ -193,46 +231,35 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Documentation',
           items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
+            { label: 'Getting Started', to: '/docs/intro' },
+            { label: 'Architecture', to: '/docs/ARCHITECTURE' },
+            { label: 'Plugin Development', to: '/docs/plugins/plugins-PLUGIN_DEVELOPMENT_SPECIFICATION_2026' },
+            { label: 'TUI Quick Reference', to: '/docs/guides/guides-TUI_QUICK_REFERENCE' },
           ],
         },
         {
-          title: 'Community',
+          title: 'Embedded SDKs',
           items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
+            { label: 'OSynaptic-RX', href: 'https://github.com/OpenSynaptic/OSynaptic-RX' },
+            { label: 'OSynaptic-TX', href: 'https://github.com/OpenSynaptic/OSynaptic-TX' },
+            { label: 'OSynaptic-FX', href: 'https://github.com/OpenSynaptic/OSynaptic-FX' },
+            { label: 'RX SDK Docs', to: '/docs/osynaptic-rx/intro' },
+            { label: 'TX SDK Docs', to: '/docs/osynaptic-tx/intro' },
           ],
         },
         {
-          title: 'More',
+          title: 'Project',
           items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-             {
-               label: 'GitHub',
-               href: 'https://github.com/opensynaptic/opensynaptic.github.io',
-             },
+            { label: 'GitHub Organization', href: 'https://github.com/OpenSynaptic' },
+            { label: 'OpenSynaptic Core', href: 'https://github.com/OpenSynaptic/OpenSynaptic' },
+            { label: 'Issues', href: 'https://github.com/OpenSynaptic/OpenSynaptic/issues' },
+            { label: 'Blog & Releases', to: '/blog' },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} OpenSynaptic, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} OpenSynaptic. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

@@ -18,5 +18,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+build_log.txt
+build_out.txt
+build_out2.txt
 /OpenSynaptic.wiki/
 /A/

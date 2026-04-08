@@ -1,22 +1,75 @@
 /**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
+ * OpenSynaptic homepage styles — compact, modern, bilingual
  */
 
+/* ─── Hero ─────────────────────────────────────────────────────────────── */
 .heroBanner {
-  padding: 4rem 0;
+  padding: 5rem 0 4rem;
   text-align: center;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(135deg, var(--ifm-color-primary-darkest) 0%, var(--ifm-color-primary-dark) 60%, var(--ifm-color-primary) 100%);
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.heroBackground {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 60% 40%, rgba(255,255,255,0.06) 0%, transparent 70%);
+  pointer-events: none;
 }
 
-.buttons {
+.heroContent {
+  position: relative;
+  z-index: 1;
+}
+
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 999px;
+  padding: 0.25rem 0.85rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.88);
+  margin-bottom: 1.2rem;
+}
+
+.badgeDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4ade80;
+  display: inline-block;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.heroTitle {
+  font-size: 2.8rem !important;
+  font-weight: 800 !important;
+  color: #fff !important;
+  margin-bottom: 0.9rem;
+  letter-spacing: -0.02em;
+}
+
+.heroSubtitle {
+  font-size: 1.0rem;
+  color: rgba(255,255,255,0.82);
+  max-width: 600px;
+  margin: 0 auto 1.8rem;
+  line-height: 1.6;
+}
+
+.heroButtons {
   display: flex;
   gap: 0.75rem;
   align-items: center;
@@ -24,24 +77,196 @@
   flex-wrap: wrap;
 }
 
-.quickSection {
-  padding: 2.5rem 0 1rem;
+@media screen and (max-width: 768px) {
+  .heroBanner { padding: 3rem 1rem 2.5rem; }
+  .heroTitle { font-size: 2rem !important; }
+  .heroSubtitle { font-size: 0.9rem; }
 }
 
-.card {
+/* ─── Section common ────────────────────────────────────────────────────── */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.6rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.4rem !important;
+}
+
+.sectionSubtitle {
+  font-size: 0.88rem;
+  color: var(--ifm-color-emphasis-600);
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* ─── Product cards ─────────────────────────────────────────────────────── */
+.cardsSection {
+  padding: 3rem 0 2.5rem;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media screen and (max-width: 1100px) {
+  .cardGrid { grid-template-columns: repeat(2, 1fr); }
+}
+@media screen and (max-width: 600px) {
+  .cardGrid { grid-template-columns: 1fr; }
+}
+
+.productCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 1.1rem 1.1rem 0.9rem;
   border: 1px solid var(--ifm-toc-border-color);
   border-radius: 10px;
-  padding: 1rem;
-  height: 100%;
+  background: var(--ifm-background-surface-color);
+  text-decoration: none !important;
+  color: inherit !important;
+  transition: border-color 0.18s, box-shadow 0.18s, transform 0.18s;
+}
+
+.productCard:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+.cardIcon {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  line-height: 1;
+  margin-top: 0.1rem;
+}
+
+.cardBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.cardTitle {
+  font-size: 0.92rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: var(--ifm-heading-color);
+}
+
+.cardDesc {
+  font-size: 0.78rem;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.cardBadge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 0.1rem 0.45rem;
+}
+
+.cardArrow {
+  font-size: 1rem;
+  color: var(--ifm-color-emphasis-400);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  transition: color 0.18s, transform 0.18s;
+}
+
+.productCard:hover .cardArrow {
+  color: var(--ifm-color-primary);
+  transform: translateX(3px);
+}
+
+/* ─── Quick links ───────────────────────────────────────────────────────── */
+.quickLinksSection {
+  padding: 2rem 0 2.5rem;
+  background: var(--ifm-background-color);
+  border-top: 1px solid var(--ifm-toc-border-color);
+}
+
+.quickLinkGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1rem;
+}
+
+.quickLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 6px;
+  color: var(--ifm-color-emphasis-800) !important;
+  text-decoration: none !important;
+  background: var(--ifm-background-surface-color);
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.quickLink:hover {
+  border-color: var(--ifm-color-primary);
+  background: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-primary-darkest) !important;
+}
+
+.quickLinkEmoji {
+  font-size: 0.85rem;
+}
+
+/* ─── Ecosystem bar ─────────────────────────────────────────────────────── */
+.ecosystemBar {
+  padding: 2rem 0 3rem;
+  border-top: 1px solid var(--ifm-toc-border-color);
   background: var(--ifm-background-surface-color);
 }
 
-.linksSection {
-  padding: 1rem 0 3rem;
+.ecosystemRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
 
-.linkRow {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+@media screen and (max-width: 768px) {
+  .ecosystemRow { grid-template-columns: 1fr; gap: 1rem; }
 }
+
+.ecosystemItem h4 {
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ifm-color-emphasis-500) !important;
+  margin-bottom: 0.6rem !important;
+}
+
+.linkGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.linkGroup a {
+  font-size: 0.82rem;
+  color: var(--ifm-color-emphasis-800) !important;
+  text-decoration: none !important;
+  transition: color 0.15s;
+}
+
+.linkGroup a:hover {
+  color: var(--ifm-color-primary) !important;
+}
+
