@@ -42,7 +42,7 @@ For example: `18-data-format-specification.md#A.1` corresponds to original `17-g
 
 ### A.1 [Migrated] Data Frame (DATA_*) Wire Format
 
-See [18-data-format-specification.md#A.1](18-data-format-specification.md#A.1)
+See [18-data-format-specification.md#A.1](18-data-format-specification.md#a1-data-frame-data_-wire-format)
 
 ## 0. Goals
 

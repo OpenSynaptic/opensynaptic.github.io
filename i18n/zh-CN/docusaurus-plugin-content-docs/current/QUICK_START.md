@@ -59,21 +59,21 @@ os-node native-build
 - TUI 快速参考 -> [guides/TUI_QUICK_REFERENCE.md](guides/guides-TUI_QUICK_REFERENCE)
 
 ### 性能工程师
-- 优化报告 -> [reports/PERFORMANCE_OPTIMIZATION_REPORT.md](reports/reports-PERFORMANCE_OPTIMIZATION_REPORT)
-- 最终性能总结 -> [reports/FINAL_PERFORMANCE_REPORT.md](reports/reports-FINAL_PERFORMANCE_REPORT)
-- 架构演变分析 -> [architecture/ARCHITECTURE_EVOLUTION_COMPARISON.md](architecture/architecture-ARCHITECTURE_EVOLUTION_COMPARISON)
+- 优化报告 -> [技术报告](reports/reports-COMPREHENSIVE_COMPLETION_SUMMARY)
+- 最终性能总结 -> [技术报告](reports/reports-COMPREHENSIVE_COMPLETION_SUMMARY)
+- 架构演变分析 -> [系统架构](ARCHITECTURE)
 
 ### 故障排除
-- Bug 修复说明 -> [reports/BUG_FIX_REPORT.md](reports/reports-BUG_FIX_REPORT)
+- Bug 修复说明 -> [技术报告](reports/reports-COMPREHENSIVE_COMPLETION_SUMMARY)
 - 模块导入修复 -> [internal/FIX_ModuleNotFoundError.md](internal/internal-FIX_ModuleNotFoundError)
 - Web 命令修复 -> [internal/WEB_COMMAND_FIX.md](internal/internal-WEB_COMMAND_FIX)
-- 所有报告 -> [reports/](reports/reports-CODE_CHANGES_SUMMARY)
+- 所有报告 -> [技术报告](reports/reports-COMPREHENSIVE_COMPLETION_SUMMARY)
 
 ### 架构师 / 维护者
 - 架构 -> [ARCHITECTURE.md](ARCHITECTURE)
 - 核心 API -> [CORE_API.md](CORE_API)
-- FFI 分析 -> [architecture/ARCHITECTURE_FFI_ANALYSIS.md](architecture/architecture-ARCHITECTURE_FFI_ANALYSIS)
-- 文档结构 -> [DOCUMENT_ORGANIZATION.md](DOCUMENT_ORGANIZATION)
+- FFI 分析 -> [系统架构](ARCHITECTURE)
+- 文档结构 -> [多语言指南](MULTI_LANGUAGE_GUIDE)
 
 ---
 
@@ -97,7 +97,7 @@ os-node native-build
    - [plugins/PLUGIN_QUICK_REFERENCE_2026.md](plugins/plugins-PLUGIN_QUICK_REFERENCE_2026)
 
 2. **理解系统内部**：
-   - [文档索引](/zh-CN/docs/index)
+   - [文档索引](/zh-CN/docs/intro)
    - [ARCHITECTURE.md](ARCHITECTURE)
    - [CORE_API.md](CORE_API)
 
@@ -108,14 +108,14 @@ os-node native-build
 
 4. **追踪变更**：
    - [reports/CHANGELOG.md](reports/reports-CHANGELOG_2026M03_24)
-   - [reports/CODE_CHANGES_SUMMARY.md](reports/reports-CODE_CHANGES_SUMMARY)
+   - [reports/COMPREHENSIVE_COMPLETION_SUMMARY.md](reports/reports-COMPREHENSIVE_COMPLETION_SUMMARY)
 
 ---
 
 ## 需要帮助？
 
-- 完整索引：[INDEX.md](/zh-CN/docs/index)
-- 文档中心：[文档索引](/zh-CN/docs/index)
+- 完整索引：[intro](/zh-CN/docs/intro)
+- 文档中心：[文档索引](/zh-CN/docs/intro)
 - 项目根 README：[Repository README](https://github.com/opensynaptic/opensynaptic/blob/main/README.md)
 
 _最后更新：2026-04-04（本地工作区）_

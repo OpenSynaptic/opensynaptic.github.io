@@ -574,6 +574,6 @@ os-node diagnose
 ## See Also
 
 - Full API reference: [SEND_API_REFERENCE.md](../api/api-SEND_API_REFERENCE)
-- Configuration details: [docs/CONFIG_SCHEMA.md](./docs/CONFIG_SCHEMA.md)
+- Configuration details: [CONFIG_SCHEMA.md](../CONFIG_SCHEMA)
 - CLI help: `os-node help`
-- Example code in tests: [tests/integration/](./tests/integration/)
+- Example code in tests: [tests/integration/](https://github.com/OpenSynaptic/OpenSynaptic/tree/main/tests/integration/)

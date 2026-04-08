@@ -354,7 +354,7 @@ os-node inject --module full --sensors '[["V1","OK",3.14,"Pa"],["T1","OK",25.3,"
 
 ---
 
-## REST/HTTP APIs
+## REST-HTTP APIs
 
 ### Web UI Service: `web_user` plugin
 
@@ -450,7 +450,7 @@ Content-Type: application/json
 
 ---
 
-## Request/Payload Formats
+## Request-Payload Formats
 
 ### Sensor Data Format (Pre-transmission)
 

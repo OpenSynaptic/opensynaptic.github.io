@@ -10,10 +10,10 @@ Complete index of all client-facing APIs for sending data.
 |----------|----------|---------|
 | **Full API Docs** | [SEND_API_REFERENCE.md](./api-SEND_API_REFERENCE) | Comprehensive reference with examples |
 | **Quick Examples** | [QUICK_START_SEND_EXAMPLES.md](../guides/guides-QUICK_START_SEND_EXAMPLES) | Copy-paste code snippets |
-| **Python Core** | [src/opensynaptic/core/pycore/core.py](./src/opensynaptic/core/pycore/core.py) | Pure Python implementation |
-| **Rust Core** | [src/opensynaptic/core/rscore/core.py](./src/opensynaptic/core/rscore/core.py) | FFI-wrapped Rust implementation |
-| **CLI Commands** | [src/opensynaptic/CLI/app.py](./src/opensynaptic/CLI/app.py) | Command-line interface |
-| **Web API** | [src/opensynaptic/services/web_user/](./src/opensynaptic/services/web_user/) | HTTP/REST endpoints |
+| **Python Core** | [src/opensynaptic/core/pycore/core.py](https://github.com/OpenSynaptic/OpenSynaptic/blob/main/src/opensynaptic/core/pycore/core.py) | Pure Python implementation |
+| **Rust Core** | [src/opensynaptic/core/rscore/core.py](https://github.com/OpenSynaptic/OpenSynaptic/blob/main/src/opensynaptic/core/rscore/core.py) | FFI-wrapped Rust implementation |
+| **CLI Commands** | [src/opensynaptic/CLI/app.py](https://github.com/OpenSynaptic/OpenSynaptic/blob/main/src/opensynaptic/CLI/app.py) | Command-line interface |
+| **Web API** | [src/opensynaptic/services/web_user/](https://github.com/OpenSynaptic/OpenSynaptic/tree/main/src/opensynaptic/services/web_user/) | HTTP/REST endpoints |
 
 ---
 
@@ -29,11 +29,11 @@ dispatch()  →  Returns bool (success/failure)
 
 | Method | Signature | Returns | Location |
 |--------|-----------|---------|----------|
-| **`transmit()`** | `transmit(sensors, device_id=None, device_status='ONLINE', **kwargs)` | `(bytes, int, str)` | [core.py #509](./src/opensynaptic/core/pycore/core.py#L509) |
-| **`transmit_fast()`** | `transmit_fast(sensors=None, device_id=None, device_status='ONLINE', **kwargs)` | `(bytes, int, str)` | [core.py #542](./src/opensynaptic/core/pycore/core.py#L542) |
-| **`transmit_batch()`** | `transmit_batch(batch_items, **kwargs)` | `List[(bytes, int, str)]` | [core.py #548](./src/opensynaptic/core/pycore/core.py#L548) |
-| **`dispatch()`** | `dispatch(packet, medium=None)` | `bool` | [core.py #559](./src/opensynaptic/core/pycore/core.py#L559) |
-| **`dispatch_with_reply()`** | `dispatch_with_reply(packet, server_ip=None, server_port=None, timeout=3.0)` | `Optional[bytes]` | [core.py #492](./src/opensynaptic/core/pycore/core.py#L492) |
+| **`transmit()`** | `transmit(sensors, device_id=None, device_status='ONLINE', **kwargs)` | `(bytes, int, str)` | [core.py #509](https://github.com/OpenSynaptic/OpenSynaptic/blob/main/src/opensynaptic/core/pycore/core.py#L509) |
+| **`transmit_fast()`** | `transmit_fast(sensors=None, device_id=None, device_status='ONLINE', **kwargs)` | `(bytes, int, str)` | [core.py #542](https://github.com/OpenSynaptic/OpenSynaptic/blob/main/src/opensynaptic/core/pycore/core.py#L542) |
+| **`transmit_batch()`** | `transmit_batch(batch_items, **kwargs)` | `List[(bytes, int, str)]` | [core.py #548](https://github.com/OpenSynaptic/OpenSynaptic/blob/main/src/opensynaptic/core/pycore/core.py#L548) |
+| **`dispatch()`** | `dispatch(packet, medium=None)` | `bool` | [core.py #559](https://github.com/OpenSynaptic/OpenSynaptic/blob/main/src/opensynaptic/core/pycore/core.py#L559) |
+| **`dispatch_with_reply()`** | `dispatch_with_reply(packet, server_ip=None, server_port=None, timeout=3.0)` | `Optional[bytes]` | [core.py #492](https://github.com/OpenSynaptic/OpenSynaptic/blob/main/src/opensynaptic/core/pycore/core.py#L492) |
 
 ### Setup/Identity
 
@@ -63,7 +63,7 @@ All commands start with `os-node` or `python -u src/main.py`.
 - From file: `--sensors-file path.json`
 - Custom transporter: `--medium UDP|TCP|MQTT|...`
 
-See: [CLI/parsers/core.py](./src/opensynaptic/CLI/parsers/core.py#L77)
+See: [CLI/parsers/core.py](https://github.com/OpenSynaptic/OpenSynaptic/blob/main/src/opensynaptic/CLI/parsers/core.py#L77)
 
 ### Setup Commands
 
@@ -107,7 +107,7 @@ os-web --cmd start -- --host 127.0.0.1 --port 8765 --block
 | `/api/transport` | GET/POST | Transporter control | `{"medium": "udp", "reload": false}` |
 | `/health` | GET | Health check | - |
 
-See: [web_user/README.md](../internal/internal-WEB_USER_README#api)
+See: [web_user/README.md](../internal/internal-WEB_USER_README#api-endpoint-quick-reference)
 
 ---
 
@@ -323,11 +323,11 @@ python -c "from opensynaptic.core import OpenSynaptic; node = OpenSynaptic(); pa
 
 - **API Reference:** [SEND_API_REFERENCE.md](./api-SEND_API_REFERENCE)
 - **Quick Examples:** [QUICK_START_SEND_EXAMPLES.md](../guides/guides-QUICK_START_SEND_EXAMPLES)
-- **Architecture:** [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md)
-- **Config Schema:** [docs/CONFIG_SCHEMA.md](./docs/CONFIG_SCHEMA.md)
-- **CLI Guide:** [src/opensynaptic/CLI/README.md](./src/opensynaptic/CLI/README.md)
-- **Transport Plugin:** [docs/TRANSPORTER_PLUGIN.md](./docs/TRANSPORTER_PLUGIN.md)
-- **ID Allocation:** [docs/ID_LEASE_SYSTEM.md](./docs/ID_LEASE_SYSTEM.md)
+- **Architecture:** [ARCHITECTURE.md](../ARCHITECTURE)
+- **Config Schema:** [CONFIG_SCHEMA.md](../CONFIG_SCHEMA)
+- **CLI Guide:** [src/opensynaptic/CLI/README.md](https://github.com/OpenSynaptic/OpenSynaptic/blob/main/src/opensynaptic/CLI/README.md)
+- **Transport Plugin:** [TRANSPORTER_PLUGIN.md](../TRANSPORTER_PLUGIN)
+- **ID Allocation:** [ID_LEASE_SYSTEM.md](../ID_LEASE_SYSTEM)
 
 ---
 

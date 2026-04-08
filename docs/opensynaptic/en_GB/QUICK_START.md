@@ -199,13 +199,13 @@ os-node native-build         # attempt build with progress output
 | View API reference | [API.md](API) |
 
    - [reports/CHANGELOG.md](reports/reports-CHANGELOG_2026M03_24)
-   - [reports/CODE_CHANGES_SUMMARY.md](reports/reports-CODE_CHANGES_SUMMARY)
+   - [reports/COMPREHENSIVE_COMPLETION_SUMMARY.md](reports/reports-COMPREHENSIVE_COMPLETION_SUMMARY)
 
 ---
 
 ## Need Help?
 
-- Full index: [INDEX.md](/docs/index)
+- Full index: [intro](/docs/intro)
 - Documentation hub: [README.md](/docs/readme)
 - Project root readme: [Repository README](https://github.com/opensynaptic/opensynaptic/blob/main/README.md)
 

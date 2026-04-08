@@ -52,7 +52,7 @@ docs/
 
 Users can switch languages in three ways:
 
-1. **Language Selector Page**: Visit [index](/docs/index) to choose language
+1. **Language Selector Page**: Visit [intro](/docs/intro) to choose language
 2. **Header Links**: Each page has language toggle links in the header
 3. **Direct URL Navigation**: 
    - English: `/docs/FILENAME.md` or `/docs/en/FILENAME.md`

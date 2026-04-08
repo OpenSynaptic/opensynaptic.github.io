@@ -10,10 +10,8 @@ slug: /readme
 
 ## 入口导航
 
-- [中文首页](/zh-CN/docs/Home)
-- [中文完整导航](/zh-CN/docs/Navigation)
-- [英文首页](/docs/Home)
-- [英文完整导航](/docs/Navigation)
+- [中文首页](/)
+- [英文首页](/)
 
 ## 从这里开始
 
@@ -33,12 +31,12 @@ slug: /readme
 
 ## 深入阅读
 
-- [架构专题](architecture/architecture-ARCHITECTURE_EVOLUTION_COMPARISON)
-- [功能专题](features/features-PORT_FORWARDER_COMPLETE_GUIDE)
-- [指南专题](guides/guides-QUICK_REFERENCE)
-- [插件专题](plugins/plugins-PLUGIN_DOCS_INDEX)
+- [系统架构](ARCHITECTURE)
+- [FX 平台文档](/docs/osynaptic-fx/intro)
+- [指南专题](guides/guides-TUI_QUICK_REFERENCE)
+- [插件专题](plugins/plugins-PLUGIN_DEVELOPMENT_SPECIFICATION)
 - [发布文档](releases/releases-v1.1.0)
-- [技术报告](reports/reports-CODE_CHANGES_SUMMARY)
+- [技术报告](reports/reports-COMPREHENSIVE_COMPLETION_SUMMARY)
 - [内部文档](internal/internal-README)
 
 最后更新：2026-04-05

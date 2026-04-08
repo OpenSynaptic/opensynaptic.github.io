@@ -105,8 +105,8 @@ OpenSynaptic_Wiki/OpenSynaptic.wiki/
 ### Link Format
 All links are now prefixed with the flattened page names:
 ```markdown
-- [Display API Guide](en-guides-DISPLAY_API_GUIDE)
-- [插件开发规范](zh-plugins-PLUGIN_DEVELOPMENT_SPECIFICATION_2026)
+- [Display API Guide](/docs/guides/guides-DISPLAY_API_GUIDE)
+- [插件开发规范](/zh-CN/docs/plugins/plugins-PLUGIN_DEVELOPMENT_SPECIFICATION_2026)
 ```
 
 ---
@@ -257,18 +257,18 @@ If you want to use this optimized wiki:
 ## 📚 Navigation Quick Reference
 
 ### English Quick Links
-- 🚀 [Getting Started](en-README)
-- 🏗️ [Architecture](en-ARCHITECTURE)
-- 🔌 [APIs](en-API)
-- 🎨 [Plugins](en-plugins-PLUGIN_DEVELOPMENT_SPECIFICATION_2026)
-- 📖 [Full Index](en-INDEX)
+- 🚀 [Getting Started](https://opensynaptic.github.io/docs/readme)
+- 🏗️ [Architecture](https://opensynaptic.github.io/docs/ARCHITECTURE)
+- 🔌 [APIs](https://opensynaptic.github.io/docs/api/api-SEND_API_INDEX)
+- 🎨 [Plugins](https://opensynaptic.github.io/docs/plugins/plugins-PLUGIN_DEVELOPMENT_SPECIFICATION_2026)
+- 📖 [Full Index](https://opensynaptic.github.io/docs/intro)
 
 ### Chinese Quick Links
-- 🚀 [快速开始](zh-README)
-- 🏗️ [架构](zh-ARCHITECTURE)
-- 🔌 [API](zh-API)
-- 🎨 [插件](zh-plugins-PLUGIN_DEVELOPMENT_SPECIFICATION_2026)
-- 📖 [完整索引](zh-INDEX)
+- 🚀 [快速开始](https://opensynaptic.github.io/zh-CN/docs/readme)
+- 🏗️ [架构](https://opensynaptic.github.io/zh-CN/docs/ARCHITECTURE)
+- 🔌 [API](https://opensynaptic.github.io/zh-CN/docs/api/api-SEND_API_INDEX)
+- 🎨 [插件](https://opensynaptic.github.io/zh-CN/docs/plugins/plugins-PLUGIN_DEVELOPMENT_SPECIFICATION_2026)
+- 📖 [完整索引](https://opensynaptic.github.io/zh-CN/docs/intro)
 
 ---
 
@@ -318,8 +318,8 @@ OpenSynaptic_Wiki/OpenSynaptic.wiki/
 
 If you encounter any issues:
 
-1. Check [Home.md](Home) for quick navigation
-2. Use [Full Index](en-INDEX) for complete document list
+1. Check [Home](/) for quick navigation
+2. Use [Full Index](/docs/intro) for complete document list
 3. Open an [issue on GitHub](https://github.com/opensynaptic/opensynaptic/issues)
 
 ---
