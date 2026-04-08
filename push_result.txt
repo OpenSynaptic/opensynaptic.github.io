@@ -1,0 +1,8 @@
+﻿git : Everything up-to-date
+At line:1 char:120
++ ...  (4)\opensynaptic.github.io" ; $r = git push origin main 2>&1 ; $r |  ...
++                                         ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], 
+    RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
