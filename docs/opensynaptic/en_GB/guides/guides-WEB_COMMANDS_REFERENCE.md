@@ -809,7 +809,7 @@ Response:
 
 ---
 
-### GET /api/display/render/{section}
+### GET /api/display/render/\{section\}
 
 Render a single display section in the requested format.
 
@@ -942,7 +942,7 @@ Response:
 
 ---
 
-### GET /api/data/packets/{uuid}
+### GET /api/data/packets/\{uuid\}
 
 Get a single packet by UUID.
 
@@ -1094,7 +1094,7 @@ Conflict (HTTP 409, username already exists):
 
 ---
 
-### PUT /users/{username}
+### PUT /users/\{username\}
 
 Update a user's role or enabled status.
 
@@ -1129,7 +1129,7 @@ os-web --cmd update -- --username alice --disable
 
 ---
 
-### DELETE /users/{username}
+### DELETE /users/\{username\}
 
 Delete a user.
 
