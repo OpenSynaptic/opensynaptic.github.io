@@ -50,7 +50,7 @@ v1.2.0 确立了 OpenSynaptic 1.x 系列的**生产性能基线**。
 |------|------|
 | Python FFI 开销是技术债吗？ | 不是——这是有意的设计选择。Python 驱动业务逻辑，Rust 负责计算。 |
 | 识别到的唯一轻度技术债 | `_invoke_batch` 中的 `from_buffer_copy` 可改为 `from_buffer`（GIL 下该竞态不会发生）|
-| Cython 评估 | 浅层改动：<10% 收益。深层 `typed memoryview` 重写：~50% 收益，工作量等同方案 C，不推荐。|
+| Cython 评估 | 浅层改动：&lt;10% 收益。深层 `typed memoryview` 重写：~50%收益，工作量等同方案 C，不推荐。|
 | per-item 阻塞 worker submit（方案 B）| 现有 API 为同步阻塞；640× FFI 开销放大后实际收益仅 ~10%，不值得改造。|
 | Rust 驱动循环 ABI（方案 C）| 仅适用于天花板测量，不适用于生产路径。 |
 | 决策 | 以本版作为生产基线，待部署目标和 pps SLA 明确后再评估进一步优化。|
