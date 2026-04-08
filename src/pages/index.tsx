@@ -204,7 +204,7 @@ function EcosystemBar() {
               <Link to="/docs/osynaptic-rx/intro">RX SDK docs</Link>
               <Link to="/docs/osynaptic-tx/intro">TX SDK docs</Link>
               <Link to="/docs/osynaptic-fx/intro">FX SDK docs</Link>
-              <Link to="/docs/osynaptic-fx/en_GB/arduino-easy-api">Arduino Easy API</Link>
+              <Link to="/docs/osynaptic-fx/arduino-easy-api">Arduino Easy API</Link>
             </div>
           </div>
         </div>

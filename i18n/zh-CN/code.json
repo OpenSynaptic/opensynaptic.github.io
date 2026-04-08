@@ -19,6 +19,14 @@
     "message": "Nexa",
     "description": "Navbar Nexa label"
   },
+  "navbar.osynapticRx": {
+    "message": "OSynaptic-RX",
+    "description": "Navbar OSynaptic-RX label"
+  },
+  "navbar.osynapticTx": {
+    "message": "OSynaptic-TX",
+    "description": "Navbar OSynaptic-TX label"
+  },
   "navbar.blog": {
     "message": "博客",
     "description": "Navbar Blog label"

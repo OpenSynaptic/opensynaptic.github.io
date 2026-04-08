@@ -104,10 +104,11 @@ const config: Config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'osynaptic-fx',
-        path: 'docs/osynaptic-fx',
+        path: 'docs/osynaptic-fx/en_GB',
         routeBasePath: 'docs/osynaptic-fx',
         sidebarPath: './sidebars.osynaptic-fx.ts',
         include: ['**/*.{md,mdx}'],
+        exclude: ['**/templates/**'],
         editUrl:
           'https://github.com/opensynaptic/opensynaptic.github.io/tree/main/',
       },
