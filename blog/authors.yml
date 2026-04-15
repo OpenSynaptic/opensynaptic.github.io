@@ -10,6 +10,12 @@ yangshun:
     github: yangshun
     newsletter: https://www.greatfrontend.com
 
+opensynaptic:
+  name: OpenSynaptic Team
+  title: Core Maintainers
+  url: https://github.com/OpenSynaptic
+  image_url: https://github.com/OpenSynaptic.png
+
 slorber:
   name: Sébastien Lorber
   title: Docusaurus maintainer
